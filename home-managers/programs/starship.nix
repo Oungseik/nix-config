@@ -1,7 +1,6 @@
 {...}:
 {
   programs.starship = {
-    enable = true;
     # custom settings
     settings = {
       add_newline = false;
