@@ -34,6 +34,16 @@
     };
   };
 
+  # hyprland - Tiling compositor with the looks
+  wayland.windowManager.hyprland = {
+    enable = true;
+    settings = {
+      "$mod" = "SUPER";
+    };
+
+  systemd.variables = ["--all"];
+  };
+
   home.stateVersion = "unstable";
 
   # Let home Manager install and manage itself.
