@@ -1,8 +1,14 @@
-{ ... }: {
+{ pkgs, ... }: {
   gtk = {
     enable = true;
 
-    # iconTheme = {};
+    # theme = {
+    # };
+
+    iconTheme = {
+      name = "Catppuccin-Macchiato";
+      package = pkgs.catppuccin-gtk-theme;
+    };
     # cursorTheme = {};
 
     font.name = "Roboto";
