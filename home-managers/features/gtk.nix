@@ -6,8 +6,8 @@
     # };
 
     iconTheme = {
-      name = "Catppuccin-Macchiato";
-      package = pkgs.catppuccin-gtk-theme;
+      name = "Colorful-Dark";
+      package = pkgs.colorful-dark-gtk-theme;
     };
     # cursorTheme = {};
 
