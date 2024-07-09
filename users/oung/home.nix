@@ -1,18 +1,27 @@
-{config, pkgs, ...}:
+{ pkgs, inputs, ...}:
 {
   home.username = "oung";
   home.homeDirectory = "/home/oung";
 
   imports = [
-    ../hyprland
-    ../programs
+    inputs.nix-colors.homeManagerModules.default
+    ../../home-managers/hyprland
+    ../../home-managers/programs
   ];
+
+  colorScheme = inputs.nix-colors.colorSchemes.catppuccin-macchiato;
 
   wayland.windowManager.hyprland.enable = true;
 
   programs = {
-    starship.enable = true;
+    firefox.enable = true;
     git.enable = true;
+    starship.enable = true;
+    zsh.enable = true;
+  };
+
+  services = {
+    mako.enable = true;
   };
 
   xresources.properties = {
@@ -26,6 +35,10 @@
     unzip
     zip
   ];
+
+  home.sessionVariables = {
+    EDITOR = "nvim";
+  };
 
   home.stateVersion = "24.05";
 
