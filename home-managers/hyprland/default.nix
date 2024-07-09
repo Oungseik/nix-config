@@ -15,9 +15,5 @@
     executable = true;
   };
 
-  # xresources.properties = {
-  #   "Xcursor.size" = 18;
-  #   "Xft.dpi" = 96;
-  # };
-
+  # wayland.windowManager.hyprland.systemd.variables = ["--all"];
 }
