@@ -14,6 +14,7 @@
   wayland.windowManager.hyprland.enable = true;
 
   programs = {
+    alacritty.enable = true;
     firefox.enable = true;
     git.enable = true;
     starship.enable = true;
