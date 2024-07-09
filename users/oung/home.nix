@@ -6,6 +6,7 @@
   imports = [
     inputs.nix-colors.homeManagerModules.default
     ../../home-managers/hyprland
+    ../../home-managers/features
     ../../home-managers/programs
   ];
 
