@@ -43,7 +43,7 @@
     isNormalUser = true;
     description = "oung";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [ git neovim home-manager ];
+    packages = with pkgs; [ git neovim home-manager hyprland ];
   };
 
   # Allow unfree packages
@@ -68,6 +68,10 @@
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
+  xdg.portal = { 
+      enable = true;
+      extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
+  };
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

@@ -12,12 +12,14 @@
 
   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-macchiato;
 
-  wayland.windowManager.hyprland.enable = true;
+  # install hyprland from nixos and manage with home-manager
+  # wayland.windowManager.hyprland.enable = true;
 
   programs = {
     alacritty.enable = true;
     firefox.enable = true;
     git.enable = true;
+    hyprland.enable = true;
     kitty.enable = true;
     starship.enable = true;
     zsh.enable = true;
