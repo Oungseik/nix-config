@@ -6,8 +6,8 @@
     # };
 
     iconTheme = {
-      name = "Colorful-Dark";
-      package = pkgs.colorful-dark-gtk-theme;
+      name = "Rose-Pine";
+      package = pkgs.rose-pine-gtk-theme;
     };
     # cursorTheme = {};
 

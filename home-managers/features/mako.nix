@@ -2,7 +2,7 @@
 
   services.mako = {
     backgroundColor = "#${config.colorScheme.colors.base01}";
-    foregroundColor = "#${config.colorScheme.colors.base0E}";
+    # foregroundColor = "#${config.colorScheme.colors.base0E}";
     textColor =  "#${config.colorScheme.colors.base04}";
 
 
