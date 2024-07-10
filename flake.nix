@@ -34,6 +34,16 @@
       ];
     };
 
+    nixosConfigurations."virtualbox" = nixpkgs.lib.nixosSystem { 
+      system = "x86_64-linux";
+      specialArgs = { inherit inputs; };
+      modules = [ 
+        ./nixos/virtualbox/configuration.nix
+      ];
+    };
+
+
+
     homeConfigurations = {
       oung = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; 
