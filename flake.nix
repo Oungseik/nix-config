@@ -29,7 +29,7 @@
         # home-manager.nixosModules.home-manager {
         #   home-manager.useGlobalPkgs = true;
         #   home-manager.useUserPackages = true;
-        #   home-manager.users.oung = import ./users/oung/home.nix;
+        #   home-manager.users.oung = import ./home/oung.nix;
         # }
       ];
     };
@@ -47,9 +47,9 @@
     homeConfigurations = {
       oung = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; 
-        extraSpecialArgs = {inherit inputs;};
+        extraSpecialArgs = { inherit inputs; };
         modules = [
-          ./users/oung/home.nix
+          ./home/oung.nix
         ];
       };
     };

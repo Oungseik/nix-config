@@ -5,26 +5,14 @@
 
   imports = [
     inputs.nix-colors.homeManagerModules.default
-    ../../home-managers/hyprland
-    ../../home-managers/features
-    ../../home-managers/programs
+
+    ../modules/programs/yazi
   ];
 
   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-macchiato;
 
-  # install hyprland from nixos and manage with home-manager
-
   programs = {
-    alacritty.enable = true;
-    firefox.enable = true;
-    git.enable = true;
-    kitty.enable = true;
-    starship.enable = true;
-    zsh.enable = true;
-  };
-
-  services = {
-    mako.enable = true;
+    yazi.enable = true;
   };
 
   xresources.properties = {
@@ -41,7 +29,6 @@
 
   home.sessionVariables = {
     EDITOR = "nvim";
-    TERMINAL = "kitty";
   };
 
   home.stateVersion = "24.05";
