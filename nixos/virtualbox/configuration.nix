@@ -43,7 +43,7 @@
     isNormalUser = true;
     description = "oung";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [ git neovim home-manager hyprland ];
+    packages = with pkgs; [ git neovim home-manager ];
   };
 
   # Allow unfree packages
