@@ -3,7 +3,21 @@
   # hyprland - Tiling compositor with the looks
   wayland.windowManager.hyprland = {
     enable = true;
-    settings = { };
+    
+    settings = {
+      decoration = {
+        rounding = 6;
+  
+        blur.enable = false;
+  
+        drop_shadow = false;
+        # shadow_rnage = 4;
+        # shadow_render_power = 3;
+        # col.shadow = "rgba(1a1a1acc)";
+
+      };
+
+    };
   };
 
   home.file.".config/hyprland/hyprland.conf".source = ./hyprland.conf;

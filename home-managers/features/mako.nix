@@ -1,9 +1,11 @@
-{config, ...}: {
+{config, ...}: let
+  palette = config.colorScheme.palette;
+in {
 
   services.mako = {
-    backgroundColor = "#${config.colorScheme.colors.base01}";
-    # foregroundColor = "#${config.colorScheme.colors.base0E}";
-    textColor =  "#${config.colorScheme.colors.base04}";
+    backgroundColor = "#${palette.base01}";
+    # foregroundColor = "#${palette.base0E}";
+    textColor =  "#${palette.base04}";
 
 
     borderRadius = 5;
