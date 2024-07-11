@@ -7,12 +7,14 @@
     inputs.nix-colors.homeManagerModules.default
 
     ../modules/programs/yazi
+    ../modules/programs/nixvim
   ];
 
   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-macchiato;
 
   programs = {
     yazi.enable = true;
+    nixvim.enable = true;
   };
 
   xresources.properties = {
