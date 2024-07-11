@@ -33,7 +33,7 @@
   };
 
   home.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    # (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     jq
     unzip
     zip
@@ -41,6 +41,7 @@
 
   home.sessionVariables = {
     EDITOR = "nvim";
+    TERMINAL = "kitty";
   };
 
   home.stateVersion = "24.05";
