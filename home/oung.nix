@@ -8,6 +8,7 @@
 
     ../modules/programs/alacritty
     ../modules/programs/nixvim
+    # ../modules/programs/starship
     ../modules/programs/yazi
   ];
 
