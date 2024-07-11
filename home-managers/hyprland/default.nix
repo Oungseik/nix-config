@@ -157,7 +157,7 @@
   home.file.".config/hypr/hyprlock.conf".source = ./hyprlock.conf;
   home.file.".config/hypr/wal.jpg".source = ./wal.jpg;
 
-  home.file.".config/hyprland/scripts" = {
+  home.file.".config/hypr/scripts" = {
     source = ./scripts;
     recursive = true;
     executable = true;
