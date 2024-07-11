@@ -6,8 +6,9 @@
   imports = [
     inputs.nix-colors.homeManagerModules.default
 
-    ../modules/programs/yazi
+    ../modules/programs/alacritty
     ../modules/programs/nixvim
+    ../modules/programs/yazi
   ];
 
   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-macchiato;
