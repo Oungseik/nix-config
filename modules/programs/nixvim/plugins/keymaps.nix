@@ -3,9 +3,6 @@
   programs.nixvim.keymaps = [
     { mode = "n"; key = "<leader>e"; options.silent = true; options.desc = "Explorer"; action = "<cmd>Neotree position=right toggle<CR>"; }
 
-    # Neotree
-    { mode = "n"; key = "<leader>ff"; options.silent = true; options.desc = "Find File"; action = "<cmd>Telescope find_files<CR>"; }
-
     # utility
     { mode = "n"; key = "<leader>q"; options.silent = true; options.desc = "Quit"; action = "<cmd>q<CR>"; }
     { mode = "n"; key = "<leader>w"; options.silent = true; options.desc = "Save"; action = "<cmd>w<CR>"; }
