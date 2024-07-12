@@ -7,7 +7,7 @@
 
       closeIcon = " ";
       bufferCloseIcon = "󰱝 ";
-      modifiedIcon = "󰔯 ";
+      modifiedIcon = "";
 
       offsets = [
         {
