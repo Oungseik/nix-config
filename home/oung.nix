@@ -9,14 +9,16 @@
     ../modules/programs/alacritty
     ../modules/programs/nixvim
     # ../modules/programs/starship
+    ../modules/programs/wofi
     ../modules/programs/yazi
   ];
 
   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-macchiato;
 
   programs = {
-    yazi.enable = true;
+    wofi.enable = true;
     nixvim.enable = true;
+    yazi.enable = true;
   };
 
   xresources.properties = {
