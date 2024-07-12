@@ -32,12 +32,12 @@
         green = "0x${base0B}";
         magenta = "0x${base0E}";
         red = "0x${base08}";
-        white = "0x${base06}";
+        white = "0x${base05}";
         yellow = "0x${base0A}";
       };
 
       cursor = {
-        cursor = "0x${base06}";
+        cursor = "0x${base05}";
         text = "0x${base00}";
       };
 
@@ -48,7 +48,7 @@
         green = "0x${base0B}";
         magenta = "0x${base0E}";
         red = "0x${base08}";
-        white = "0x${base06}";
+        white = "0x${base05}";
         yellow = "0x${base0A}";
       };
 
@@ -69,15 +69,15 @@
         green = "0x${base0B}";
         magenta = "0x${base0E}";
         red = "0x${base08}";
-        white = "0x${base06}";
+        white = "0x${base05}";
         yellow = "0x${base0A}";
       };
 
       primary = {
         background = "0x${base00}";
-        bright_foreground = "0x${base06}";
+        bright_foreground = "0x${base05}";
         dim_foreground = "0x${base06}";
-        foreground = "0x${base06}";
+        foreground = "0x${base05}";
       };
 
       search.focused_match = {
@@ -91,7 +91,7 @@
       };
 
       selection = {
-        background = "0x${base06}";
+        background = "0x${base05}";
         text = "0x${base00}";
       };
 
