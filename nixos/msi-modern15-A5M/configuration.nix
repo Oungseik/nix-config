@@ -36,7 +36,7 @@
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
+  # networking.proxy.default = "127.0.0.1:2081";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
@@ -94,7 +94,6 @@
     description = "Min Aung Thu Win";
     extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
-      alacritty
       brightnessctl
       dunst
       evince
@@ -110,7 +109,6 @@
       kitty
       lunarvim
       libnotify
-      jq
       nekoray
       neovide
       nodejs_20
@@ -123,11 +121,8 @@
       rustup
       slurp
       starship
-      xfce.thunar
       waybar
-      wezterm
       wl-clipboard
-      wofi
     ];
   };
 
@@ -135,7 +130,7 @@
   nixpkgs.config.allowUnfree = true;
 
   fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    # (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
   ];
 
   # List packages installed in system profile. To search, run:
@@ -152,7 +147,6 @@
    mpc-cli
    mpd
    ncmpcpp
-   neovim
    openvpn
    playerctl
    tmux
