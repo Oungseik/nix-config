@@ -32,6 +32,7 @@
     go
     ssh-to-age
     jq
+    ripgrep
     unzip
     zip
   ];
