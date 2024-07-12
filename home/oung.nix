@@ -28,6 +28,9 @@
 
   home.packages = with pkgs; [
     # (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    age
+    go
+    ssh-to-age
     jq
     unzip
     zip
