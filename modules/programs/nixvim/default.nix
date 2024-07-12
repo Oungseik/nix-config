@@ -10,6 +10,7 @@
     colorschemes.catppuccin = {
       enable = true;
       settings.flavour = "macchiato";
+      settings.integrations.native_lsp.enabled = true;
     };
 
     luaLoader.enable = true;

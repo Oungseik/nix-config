@@ -3,6 +3,7 @@
   
   programs.nixvim.plugins = {
     lsp-lines.enable = true;
+    lsp-lines.currentLine = true;
     # lsp-format.enable = true;
     # helm.enable = true;
 

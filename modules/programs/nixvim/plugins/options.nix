@@ -2,10 +2,10 @@
   programs.nixvim = {
     extraConfigLuaPre =
       ''
-        vim.fn.sign_define("diagnosticsignerror", { text = " ", texthl = "diagnosticwarn", linehl = "", numhl = "" })
-        vim.fn.sign_define("diagnosticsignwarn", { text = " ", texthl = "diagnosticerror", linehl = "", numhl = "" })
-        vim.fn.sign_define("diagnosticsignhint", { text = "󰌵", texthl = "diagnostichint", linehl = "", numhl = "" })
-        vim.fn.sign_define("diagnosticsigninfo", { text = " ", texthl = "diagnosticinfo", linehl = "", numhl = "" })
+        vim.fn.sign_define("DiagnosticSignError", { text = "", texthl = "DiagnosticSignError", linehl = "", numhl = "" })
+        vim.fn.sign_define("DiagnosticSignWarn", { text = "", texthl = "DiagnosticSignWarn", linehl = "", numhl = "" })
+        vim.fn.sign_define("DiagnosticSignHint", { text = "󰌵", texthl = "DiagnosticSignHint", linehl = "", numhl = "" })
+        vim.fn.sign_define("DiagnosticSignInfo", { text = "", texthl = "DiagnosticSignInfo", linehl = "", numhl = "" })
       '';
 
     clipboard = {
@@ -25,6 +25,7 @@
       foldenable = false;
       linebreak = true;
       cursorline = true;
+      signcolumn = "yes";
 
       wrap = false;
 
