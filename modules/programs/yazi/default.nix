@@ -12,7 +12,7 @@ in {
 
     settings = {
       manager = {
-        show_hidden = true;
+        show_hidden = false;
       };
       preview = {
         max_width = 1000;
