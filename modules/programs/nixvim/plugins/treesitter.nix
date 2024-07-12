@@ -5,6 +5,19 @@
       nixvimInjections = true;
       folding = true;
       settings.indent.enable = true;
+      settings.ensure_installed = [
+      ];
+      settings.highlight.disable = ''
+        function ()
+          if vim.fn.strwidth(vim.fn.getline('.')) > 300
+            or vim.fn.getfsize(vim.fn.expand('%')) > 1024 * 1024 then
+            return false
+          else
+            return true
+          end
+        end
+      '';
+    settings.parser_install_dir = "$HOME/.local/share/treesitter";
     };
 
     treesitter-refactor = {
