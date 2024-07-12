@@ -110,7 +110,6 @@
       lunarvim
       libnotify
       nekoray
-      neovide
       nodejs_20
       pavucontrol
       python3
