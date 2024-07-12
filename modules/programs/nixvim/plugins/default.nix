@@ -7,6 +7,7 @@
     ./neo-tree.nix
     ./options.nix
     ./telescope.nix
+    ./toggleterm.nix
     ./treesitter.nix
     ./which-key.nix
   ];
