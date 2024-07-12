@@ -3,12 +3,12 @@
     enable = true;
 
     componentSeparators = {
-      left = "";
-      right = "";
+      right = "";
+      left = "";
     };
     sectionSeparators = {
-      left = "";
-      right = "";
+      right = "";
+      left = "";
     };
 
     globalstatus = true;
