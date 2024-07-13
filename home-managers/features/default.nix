@@ -1,6 +1,1 @@
-{
-  imports = [
-    ./gtk.nix
-    ./mako.nix
-  ];
-}
+{ imports = [ ./gtk.nix ./mako.nix ]; }

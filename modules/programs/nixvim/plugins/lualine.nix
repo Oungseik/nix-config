@@ -1,4 +1,4 @@
-{...}: {
+{ ... }: {
   programs.nixvim.plugins.lualine = {
     enable = true;
 
@@ -7,26 +7,19 @@
       # left = "";
     };
     sectionSeparators = {
-    # right = "";
-    # left = "";
+      # right = "";
+      # left = "";
     };
 
     globalstatus = true;
-    extensions = [
-      "fzf"
-      "neo-tree"
-    ];
-    disabledFiletypes = {
-      statusline = ["startup" "alpha"];
-    };
+    extensions = [ "fzf" "neo-tree" ];
+    disabledFiletypes = { statusline = [ "startup" "alpha" ]; };
     theme = "catppuccin";
     sections = {
-      lualine_a = [
-        {
-          name = "mode";
-          icon = " ";
-        }
-      ];
+      lualine_a = [{
+        name = "mode";
+        icon = " ";
+      }];
       lualine_b = [
         {
           name = "branch";
@@ -47,7 +40,7 @@
         {
           name = "diagnostics";
           extraConfig = {
-            sources = ["nvim_lsp"];
+            sources = [ "nvim_lsp" ];
             symbols = {
               error = " ";
               warn = " ";
@@ -69,15 +62,11 @@
         }
         {
           name = "filename";
-          extraConfig = {
-            path = 1;
-          };
+          extraConfig = { path = 1; };
         }
       ];
       lualine_x = [
-        {
-          name = "navic";
-        }
+        { name = "navic"; }
         {
           name.__raw = ''
             function()
@@ -93,16 +82,8 @@
           '';
         }
       ];
-      lualine_y = [
-        {
-          name = "progress";
-        }
-      ];
-      lualine_z = [
-        {
-          name = "location";
-        }
-      ];
+      lualine_y = [{ name = "progress"; }];
+      lualine_z = [{ name = "location"; }];
     };
   };
 }

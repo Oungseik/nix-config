@@ -1,4 +1,4 @@
-{...}: {
+{ ... }: {
   programs.kitty = {
     font.name = "JetBrainsMono NF";
     font.size = 13;

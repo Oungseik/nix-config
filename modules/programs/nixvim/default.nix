@@ -1,9 +1,6 @@
 { inputs, ... }: {
 
-  imports = [
-    inputs.nixvim.homeManagerModules.nixvim
-    ./plugins
-  ];
+  imports = [ inputs.nixvim.homeManagerModules.nixvim ./plugins ];
 
   programs.nixvim = {
     defaultEditor = true;

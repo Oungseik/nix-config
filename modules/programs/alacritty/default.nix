@@ -1,5 +1,5 @@
 { config, ... }: {
-  programs.alacritty.enable = true; 
+  programs.alacritty.enable = true;
   programs.alacritty.settings = {
     font = {
       size = 13;
@@ -11,21 +11,27 @@
       offset.y = 0;
     };
 
-    keyboard.bindings = [
-    { action = "CreateNewWindow"; key = "N"; mods = "Shift|Control"; }
-    ];
+    keyboard.bindings = [{
+      action = "CreateNewWindow";
+      key = "N";
+      mods = "Shift|Control";
+    }];
 
-    window = {
-      opacity = 0.95;
-    };
-    
+    window = { opacity = 0.95; };
+
     colors = with config.colorScheme.palette; {
       indexed_colors = [
-        { color = "0x${base09}"; index = 16; }
-        { color = "0x${base06}"; index = 17; }
-      ] ;
+        {
+          color = "0x${base09}";
+          index = 16;
+        }
+        {
+          color = "0x${base06}";
+          index = 17;
+        }
+      ];
 
-      bright = { 
+      bright = {
         black = "0x${base00}";
         blue = "0x${base0D}";
         cyan = "0x${base0C}";

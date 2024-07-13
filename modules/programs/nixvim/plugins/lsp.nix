@@ -1,6 +1,6 @@
 # checkout https://github.com/dc-tec/nixvim/blob/21072b364c6b8627cbb7a360556eadb3f3a8d412/config/plugins/lsp/lsp.nix
 { ... }: {
-  
+
   programs.nixvim.plugins = {
     lsp-lines.enable = true;
     lsp-lines.currentLine = true;

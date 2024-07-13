@@ -1,5 +1,4 @@
-{ pkgs, inputs, ...}:
-{
+{ pkgs, inputs, ... }: {
   home.username = "oung";
   home.homeDirectory = "/home/oung";
 
@@ -36,9 +35,7 @@
     zip
   ];
 
-  home.sessionVariables = {
-    EDITOR = "nvim";
-  };
+  home.sessionVariables = { EDITOR = "nvim"; };
 
   home.stateVersion = "24.05";
 

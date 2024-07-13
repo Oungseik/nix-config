@@ -2,7 +2,7 @@
   # hyprland - Tiling compositor with the looks
   wayland.windowManager.hyprland = {
     enable = true;
-    
+
     settings = {
       "$mod" = "SUPER";
 
@@ -31,9 +31,9 @@
 
       decoration = {
         rounding = 6;
-  
+
         blur.enable = false;
-  
+
         drop_shadow = false;
         shadow_rnage = 4;
         shadow_render_power = 3;
@@ -46,12 +46,12 @@
         bezier = "myBezier, 0.05, 0.8, 0.1, 1.00";
 
         animation = [
-           "windows, 1, 4, myBezier"
-           "windowsOut, 1, 4, default, popin 80%"
-           "border, 1, 7, default"
-           "borderangle, 1, 6, default"
-           "fade, 1, 5, default"
-           "workspaces, 1, 5, default"
+          "windows, 1, 4, myBezier"
+          "windowsOut, 1, 4, default, popin 80%"
+          "border, 1, 7, default"
+          "borderangle, 1, 6, default"
+          "fade, 1, 5, default"
+          "workspaces, 1, 5, default"
         ];
       };
 
@@ -65,13 +65,9 @@
         mfact = "+0.625";
       };
 
-      gestures = {
-        workspace_swipe = true;
-      };
+      gestures = { workspace_swipe = true; };
 
-      misc = {
-        force_default_wallpaper = 2;
-      };
+      misc = { force_default_wallpaper = 2; };
 
       bind = [
         "$mod, RETURN, exec, ${pkgs.kitty}"
@@ -93,8 +89,10 @@
         ", f10, exec, brightnessctl set +5% "
 
         # Screenshot and save to a file
-        ", Print, exec, IMG=$HOME/Pictures//Screenshots/$(date +'%s_grim.png') && ${pkgs.grim} -c -o \"$(hyprctl activeworkspace -j | ${pkgs.jq} -r '.monitor')\" $IMG && wl-copy < $IMG"
-        "$mod, Print, exec, IMG=$HOME/Pictures/Screenshots/$(date +'%s_grim.png') && ${pkgs.grim} -c -g \"$(${pkgs.slurp})\" $IMG && wl-copy < $IMG"
+        ''
+          , Print, exec, IMG=$HOME/Pictures//Screenshots/$(date +'%s_grim.png') && ${pkgs.grim} -c -o "$(hyprctl activeworkspace -j | ${pkgs.jq} -r '.monitor')" $IMG && wl-copy < $IMG''
+        ''
+          $mod, Print, exec, IMG=$HOME/Pictures/Screenshots/$(date +'%s_grim.png') && ${pkgs.grim} -c -g "$(${pkgs.slurp})" $IMG && wl-copy < $IMG''
 
         # Layout Messages Dispatchers
         "$mod, j, layoutmsg, cyclenext"
@@ -142,10 +140,7 @@
         "$mod SHIFT, l, focusmonitor, +1 "
       ];
 
-      bindm = [
-        "$mod, mouse:272, movewindow"
-        "$mod, mouse:273, resizewindow" 
-      ];
+      bindm = [ "$mod, mouse:272, movewindow" "$mod, mouse:273, resizewindow" ];
 
     };
 

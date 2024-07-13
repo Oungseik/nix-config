@@ -1,4 +1,4 @@
-{...}: {
+{ ... }: {
   programs.git = {
     userName = "Ryan Yin";
     userEmail = "xiaoyin_c@qq.com";
