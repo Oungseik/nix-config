@@ -143,9 +143,6 @@
    git
    home-manager
    htop
-   mpc-cli
-   mpd
-   ncmpcpp
    openvpn
    playerctl
    tmux
