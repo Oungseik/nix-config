@@ -7,7 +7,6 @@
     inputs.nix-colors.homeManagerModules.default
 
     ../modules/programs/alacritty
-    ../modules/programs/nixvim
     # ../modules/programs/starship
     ../modules/programs/wofi
     ../modules/programs/yazi
@@ -17,7 +16,6 @@
 
   programs = {
     wofi.enable = true;
-    nixvim.enable = true;
     yazi.enable = true;
   };
 
@@ -27,6 +25,7 @@
   };
 
   home.packages = with pkgs; [
+    inputs.nixvim.packages.${system}.default
     # (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     age
     go

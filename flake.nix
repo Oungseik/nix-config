@@ -8,7 +8,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixvim.url = "github:nix-community/nixvim";
+    nixvim.url = "github:Oungseik/nixvim";
     nix-colors.url = "github:misterio77/nix-colors";
   };
 
@@ -42,8 +42,6 @@
         ./nixos/virtualbox/configuration.nix
       ];
     };
-
-
 
     homeConfigurations = {
       oung = home-manager.lib.homeManagerConfiguration {
