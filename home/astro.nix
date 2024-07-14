@@ -7,10 +7,13 @@
   imports = [
     inputs.nix-colors.homeManagerModules.default
 
+    ../modules/programs/alacritty
     ../modules/programs/starship
     ../modules/programs/yazi
     ../modules/programs/zsh
   ];
+
+  colorScheme = inputs.nix-colors.colorSchemes.catppuccin-macchiato;
 
   programs = {
     starship.enable = true;
