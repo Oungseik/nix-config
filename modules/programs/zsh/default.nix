@@ -1,5 +1,5 @@
 { pkgs, ... }: {
-  home.packages = with pkgs; [ exa ];
+  home.packages = with pkgs; [ eza ];
   programs.zsh = {
     autocd = true;
     dotDir = ".config/zsh";
@@ -7,8 +7,8 @@
     syntaxHighlighting.enable = true;
 
     shellAliases = {
-      ls = "exa";
-      la = "exa -la";
+      ls = "eza";
+      la = "eza -la";
 
     };
 
