@@ -2,8 +2,9 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
-
+{ config, pkgs, ... }: let
+  sddmTheme = import ../../pkgs/sddm-theme.nix { inherit pkgs; };
+in
 {
   imports =
     [
@@ -38,6 +39,11 @@
     enable = true;
     xkb.layout = "us";
     xkb.variant = "";
+
+    displayManager.sddm = {
+      enable = true;
+      theme = "${sddmTheme}";
+    };
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -55,7 +61,10 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  # environment.systemPackages = with pkgs; [ ];
+  environment.systemPackages = with pkgs; [
+    libsForQt5.qt5.qtquickcontrols2
+    lobsForQt5.qt5.qtgraphicaleffects
+  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

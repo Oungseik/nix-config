@@ -1,5 +1,6 @@
-{ pkgs }:
-
+{ pkgs }: let
+  image = "../wallpapers/painting-mountain-lake-with-mountain-background.jpg";
+in
 pkgs.stdenv.mkDerivation {
   name = "sddm-theme";
   src = pkgs.fetchFromGitHub {
@@ -12,5 +13,6 @@ pkgs.stdenv.mkDerivation {
   installPhase = ''
     mkdir -p $out
     cp -R ./* $out/
+    cp -r ${image} $out/Background.jpg
   '';
 }
