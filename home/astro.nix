@@ -6,10 +6,17 @@
 
   imports = [
     inputs.nix-colors.homeManagerModules.default
-    ../modules/window-managers/hyprland
+
+    ../modules/programs/starship
+    ../modules/programs/yazi
+    ../modules/programs/zsh
   ];
 
-  wayland.windowManager.hyprland.enable = true;
+  programs = {
+    starship.enable = true;
+    yazi.enable = true;
+    zsh.enable = true;
+  };
 
   home.packages = with pkgs; [
     inputs.nixvim.packages.${system}.default
