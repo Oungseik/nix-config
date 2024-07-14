@@ -1,6 +1,8 @@
 { pkgs, inputs, ... }: {
-  home.username = "oung";
-  home.homeDirectory = "/home/oung";
+  home = {
+    username = "oung";
+    homeDirectory = "/home/oung";
+  };
 
   imports = [
     inputs.nix-colors.homeManagerModules.default

@@ -90,7 +90,7 @@
 
         # Screenshot and save to a file
         ''
-          , Print, exec, IMG=$HOME/Pictures//Screenshots/$(date +'%s_grim.png') && ${pkgs.grim} -c -o "$(hyprctl activeworkspace -j | ${pkgs.jq} -r '.monitor')" $IMG && wl-copy < $IMG''
+          , Print, exec, IMG=$HOME/Pictures/Screenshots/$(date +'%s_grim.png') && ${pkgs.grim} -c -o "$(hyprctl activeworkspace -j | ${pkgs.jq} -r '.monitor')" $IMG && wl-copy < $IMG''
         ''
           $mod, Print, exec, IMG=$HOME/Pictures/Screenshots/$(date +'%s_grim.png') && ${pkgs.grim} -c -g "$(${pkgs.slurp})" $IMG && wl-copy < $IMG''
 

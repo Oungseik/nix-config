@@ -1,12 +1,13 @@
 { pkgs, ... }:
-let 
+let
   terminal = "${pkgs.kitty}/bin/kitty";
   yazi = "${pkgs.yazi}/bin/yazi";
   wofi = "${pkgs.wofi}/bin/wofi";
   grim = "${pkgs.grim}/bin/grim";
   slurp = "${pkgs.slurp}/bin/slurp";
   jq = "${pkgs.jq}/bin/jq";
-in {
+in
+{
   # hyprland - Tiling compositor with the looks
   wayland.windowManager.hyprland = {
     enable = true;
@@ -99,7 +100,7 @@ in {
 
         # Screenshot and save to a file
         ''
-          , Print, exec, IMG=$HOME/Pictures//Screenshots/$(date +'%s_grim.png') && ${grim} -c -o "$(hyprctl activeworkspace -j | ${jq} -r '.monitor')" $IMG && wl-copy < $IMG''
+          , Print, exec, IMG=$HOME/Pictures/Screenshots/$(date +'%s_grim.png') && ${grim} -c -o "$(hyprctl activeworkspace -j | ${jq} -r '.monitor')" $IMG && wl-copy < $IMG''
         ''
           $mod, Print, exec, IMG=$HOME/Pictures/Screenshots/$(date +'%s_grim.png') && ${grim} -c -g "$(${slurp})" $IMG && wl-copy < $IMG''
 
@@ -158,14 +159,15 @@ in {
     '';
   };
 
-  home.file.".config/hypr/hyprlock.conf".source = ./hyprlock.conf;
-  home.file.".config/hypr/wal.jpg".source = ./wal.jpg;
-
-  home.file.".config/hypr/scripts" = {
-    source = ./scripts;
-    recursive = true;
-    executable = true;
+  home.file = {
+    ".config/hypr/hyprlock.conf".source = ./hyprlock.conf;
+    ".config/hypr/wal.jpg".source = ./wal.jpg;
+    ".config/hypr/scripts" = {
+      source = ./scripts;
+      recursive = true;
+      executable = true;
+    };
   };
 
-  # wayland.windowManager.hyprland.systemd.variables = ["--all"];
+  wayland.windowManager.hyprland.systemd.variables = [ "--all" ];
 }

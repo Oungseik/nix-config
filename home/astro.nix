@@ -1,6 +1,15 @@
 { pkgs, inputs, ... }: {
-  home.username = "astro";
-  home.homeDirectory = "/home/astro";
+  home = {
+    username = "astro";
+    homeDirectory = "/home/astro";
+  };
+
+  imports = [
+    inputs.nix-colors.homeManagerModules.default
+    ../modules/window-managers/hyprland
+  ];
+
+  wayland.windowManager.hyprland.enable = true;
 
   home.packages = with pkgs; [
     inputs.nixvim.packages.${system}.default
