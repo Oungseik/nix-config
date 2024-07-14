@@ -41,8 +41,8 @@
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
+  users.defaultUserShell = pkgs.zsh;
   users.users.astro = {
-    shell = pkgs.zsh;
     isNormalUser = true;
     description = "Min Aun Thu Win";
     extraGroups = [ "networkmanager" "wheel" ];
