@@ -68,6 +68,7 @@
   programs = {
     ssh.enableAskPassword = false;
     hyprland.enable = true;
+    zsh.enable = true;
   };
 
   xdg.portal = {
