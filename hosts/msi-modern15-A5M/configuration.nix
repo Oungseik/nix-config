@@ -168,6 +168,7 @@
   xdg.portal = {
     enable = true;
     extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
+    configPackages = [ pkgs.xdg-desktop-portal-hyprland ];
   };
 
   # List services that you want to enable:

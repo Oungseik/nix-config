@@ -71,6 +71,7 @@
   xdg.portal = {
     enable = true;
     extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
+    configPackages = [ pkgs.xdg-desktop-portal-hyprland ];
   };
 
   # Open ports in the firewall.
