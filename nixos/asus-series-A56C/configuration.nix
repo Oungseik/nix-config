@@ -66,6 +66,7 @@
   # };
 
   programs = {
+    ssh.enableAskPassword = false;
     hyprland.enable = true;
   };
 
