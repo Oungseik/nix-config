@@ -33,13 +33,28 @@
         ];
       };
 
-      nixosConfigurations."virtualbox" = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = { inherit inputs; };
-        modules = [ ./nixos/virtualbox/configuration.nix ];
-      };
+      nixosConfigurations = {
+        "virtualbox" = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = { inherit inputs; };
+          modules = [ ./nixos/virtualbox/configuration.nix ];
+        };
+
+        "asus-series-A56C" = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = { inherit inputs; };
+          modules = [ ./nixos/asus-series-A56C/configuration.nix ];
+        };
+
+      }; 
 
       homeConfigurations = {
+        astro = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          extraSpecialArgs = { inherit inputs; };
+          modules = [ ./home/astro.nix ];
+        };
+
         oung = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = { inherit inputs; };

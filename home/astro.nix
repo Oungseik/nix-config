@@ -1,28 +1,24 @@
 { pkgs, inputs, ... }: {
   home = {
-    username = "oung";
-    homeDirectory = "/home/oung";
+    username = "astro";
+    homeDirectory = "/home/astro";
   };
 
   imports = [
     inputs.nix-colors.homeManagerModules.default
 
     ../modules/programs/alacritty
-    # ../modules/programs/starship
-    ../modules/programs/wofi
+    ../modules/programs/starship
     ../modules/programs/yazi
+    ../modules/programs/zsh
   ];
 
   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-macchiato;
 
   programs = {
-    wofi.enable = true;
+    starship.enable = true;
     yazi.enable = true;
-  };
-
-  xresources.properties = {
-    "Xcursor.size" = 16;
-    "Xft.dpi" = 96;
+    zsh.enable = true;
   };
 
   home.packages = with pkgs; [
