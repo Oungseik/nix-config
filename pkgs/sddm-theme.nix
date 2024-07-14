@@ -1,5 +1,9 @@
-{ pkgs }: let
-  image = "../wallpapers/painting-mountain-lake-with-mountain-background.jpg";
+{ pkgs }:
+let
+  image = pkgs.fetchurl {
+    url = "https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg";
+    sha256 = "02shlqzrw1mrm27wx7nrrv1pv9628iycw9d11zph28q32kdhpvaw";
+  };
 in
 pkgs.stdenv.mkDerivation {
   name = "sddm-theme";
@@ -12,7 +16,9 @@ pkgs.stdenv.mkDerivation {
 
   installPhase = ''
     mkdir -p $out
-    cp -R ./* $out/
+    cp -R ./* $out
+    cd $out
+    rm Background.jpg
     cp -r ${image} $out/Background.jpg
   '';
 }
