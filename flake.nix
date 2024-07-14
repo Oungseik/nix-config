@@ -19,7 +19,7 @@
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
-          ./nixos/msi-modern15-A5M/configuration.nix
+          ./hosts/msi-modern15-A5M/configuration.nix
           # you can use this instead of `specialArgs`. Check out https://nixos-and-flakes.thiscute.world/nixos-with-flakes/nixos-flake-and-module-system#pass-non-default-parameters-to-submodules 
           # { _module.args = { inherit inputs; }; }
 
@@ -37,13 +37,13 @@
         "virtualbox" = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           specialArgs = { inherit inputs; };
-          modules = [ ./nixos/virtualbox/configuration.nix ];
+          modules = [ ./hosts/virtualbox/configuration.nix ];
         };
 
         "asus-series-A56C" = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           specialArgs = { inherit inputs; };
-          modules = [ ./nixos/asus-series-A56C/configuration.nix ];
+          modules = [ ./hosts/asus-series-A56C/configuration.nix ];
         };
 
       }; 
