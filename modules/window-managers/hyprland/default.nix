@@ -1,5 +1,11 @@
 { pkgs, ... }:
-let terminal = pkgs.kitty;
+let 
+  terminal = "${pkgs.kitty}/bin/kitty";
+  yazi = "${pkgs.yazi}/bin/yazi";
+  wofi = "${pkgs.wofi}/bin/wofi";
+  grim = "${pkgs.grim}/bin/grim";
+  slurp = "${pkgs.slurp}/bin/slurp";
+  jq = "${pkgs.jq}/bin/jq";
 in {
   # hyprland - Tiling compositor with the looks
   wayland.windowManager.hyprland = {
@@ -74,11 +80,11 @@ in {
 
       bind = [
         "$mod, RETURN, exec, ${terminal}"
-        "$mod, E, exec, ${terminal} -e ${pkgs.yazi}"
+        "$mod, E, exec, ${terminal} -e ${yazi}"
         "UPER_SHIFT, q, killactive, "
         "UPER_SHIFT, X, exit, "
         "$mod, V, togglefloating, "
-        "$mod, p, exec, pkill ${pkgs.wofi} || ${pkgs.wofi} --dmenu --show drun"
+        "$mod, p, exec, pkill ${wofi} || ${wofi} --dmenu --show drun"
 
         "$mod, M, fullscreen, 1"
         "$mod, F, fullscreen, 0"
@@ -93,9 +99,9 @@ in {
 
         # Screenshot and save to a file
         ''
-          , Print, exec, IMG=$HOME/Pictures//Screenshots/$(date +'%s_grim.png') && ${pkgs.grim} -c -o "$(hyprctl activeworkspace -j | ${pkgs.jq} -r '.monitor')" $IMG && wl-copy < $IMG''
+          , Print, exec, IMG=$HOME/Pictures//Screenshots/$(date +'%s_grim.png') && ${grim} -c -o "$(hyprctl activeworkspace -j | ${jq} -r '.monitor')" $IMG && wl-copy < $IMG''
         ''
-          $mod, Print, exec, IMG=$HOME/Pictures/Screenshots/$(date +'%s_grim.png') && ${pkgs.grim} -c -g "$(${pkgs.slurp})" $IMG && wl-copy < $IMG''
+          $mod, Print, exec, IMG=$HOME/Pictures/Screenshots/$(date +'%s_grim.png') && ${grim} -c -g "$(${slurp})" $IMG && wl-copy < $IMG''
 
         # Layout Messages Dispatchers
         "$mod, j, layoutmsg, cyclenext"
