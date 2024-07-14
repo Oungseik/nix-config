@@ -2,7 +2,8 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }: let
+{ config, pkgs, ... }:
+let
   sddmTheme = import ../../pkgs/sddm-theme.nix { inherit pkgs; };
 in
 {
@@ -40,10 +41,6 @@ in
     xkb.layout = "us";
     xkb.variant = "";
 
-    displayManager.sddm = {
-      enable = true;
-      theme = "${sddmTheme}";
-    };
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -63,7 +60,7 @@ in
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     libsForQt5.qt5.qtquickcontrols2
-    lobsForQt5.qt5.qtgraphicaleffects
+    libsForQt5.qt5.qtgraphicaleffects
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -89,7 +86,13 @@ in
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
+  services = {
+    openssh.enable = true;
+    displayManager.sddm = {
+      enable = true;
+      theme = "${sddmTheme}";
+    };
+  };
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
