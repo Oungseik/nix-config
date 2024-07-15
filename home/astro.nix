@@ -8,6 +8,7 @@
     inputs.nix-colors.homeManagerModules.default
 
     ../modules/programs/alacritty
+    ../modules/programs/kitty
     ../modules/programs/starship
     ../modules/programs/yazi
     ../modules/programs/zsh
@@ -16,6 +17,7 @@
   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-macchiato;
 
   programs = {
+    kitty.enable = true;
     starship.enable = true;
     yazi.enable = true;
     zsh.enable = true;
