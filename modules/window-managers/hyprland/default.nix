@@ -82,8 +82,8 @@ in
       bind = [
         "$mod, RETURN, exec, ${terminal}"
         "$mod, E, exec, ${terminal} -e ${yazi}"
-        "UPER_SHIFT, q, killactive, "
-        "UPER_SHIFT, X, exit, "
+        "SUPER_SHIFT, q, killactive, "
+        "SUPER_SHIFT, X, exit, "
         "$mod, V, togglefloating, "
         "$mod, p, exec, pkill ${wofi} || ${wofi} --dmenu --show drun"
 
