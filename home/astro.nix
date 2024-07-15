@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, inputs, lib, ... }: {
   home = {
     username = "astro";
     homeDirectory = "/home/astro";
@@ -20,7 +20,11 @@
   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-macchiato;
 
   programs = {
-    kitty.enable = true;
+    kitty = {
+      enable = true;
+      font.size = lib.mkForce 12;
+    };
+
     starship.enable = true;
     yazi.enable = true;
     zsh.enable = true;
@@ -38,6 +42,8 @@
     zip
   ];
 
+  # fonts.fontconfig.enable = true;
+  # fonts.fontconfig.enableProfileFonts = true;
   home.sessionVariables = { EDITOR = "nvim"; };
 
   home.stateVersion = "24.05";
