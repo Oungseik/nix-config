@@ -73,7 +73,7 @@ in
 
   programs = {
     hyprland.enable = true;
-    hyprland.package = inputs.hyprland.packages."x86_64-linux".hyprland;
+    # hyprland.package = inputs.hyprland.packages."x86_64-linux".hyprland;
 
     ssh.enableAskPassword = false;
     zsh.enable = true;

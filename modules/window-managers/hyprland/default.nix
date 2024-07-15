@@ -32,8 +32,8 @@ in
         gaps_in = 4;
         gaps_out = 4;
         border_size = 2;
-        col.active_border = "rgba(33ccffee) rgba(00ff99ee) 45deg";
-        col.inactive_border = "rgba(595959aa)";
+        "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
+        "col.inactive_border" = "rgba(595959aa)";
 
         layout = "master";
         allow_tearing = false;
@@ -42,12 +42,16 @@ in
       decoration = {
         rounding = 6;
 
-        blur.enable = false;
+        blur = {
+          enabled = false;
+          size = 3;
+          passes = 1;
+        };
 
         drop_shadow = false;
-        shadow_rnage = 4;
+        shadow_range = 4;
         shadow_render_power = 3;
-        col.shadow = "rgba(1a1a1acc)";
+        "col.shadow" = "rgba(1a1a1acc)";
       };
 
       animations = {
@@ -155,7 +159,6 @@ in
     };
 
     extraConfig = ''
-      source = ~/.config/hypr/hyprland-extra.conf
     '';
   };
 

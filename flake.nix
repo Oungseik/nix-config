@@ -10,7 +10,7 @@
 
     nixvim.url = "github:Oungseik/nixvim";
     nix-colors.url = "github:misterio77/nix-colors";
-    hyprland.url = "github:hyprwm/Hyprland";
+    # hyprland.url = "github:hyprwm/Hyprland";
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
@@ -47,7 +47,7 @@
           modules = [ ./hosts/asus-series-A56C/configuration.nix ];
         };
 
-      }; 
+      };
 
       homeConfigurations = {
         astro = home-manager.lib.homeManagerConfiguration {
