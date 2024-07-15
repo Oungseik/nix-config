@@ -10,6 +10,7 @@
     ../modules/programs/alacritty
     ../modules/programs/kitty
     ../modules/programs/starship
+    ../modules/themes
     ../modules/programs/yazi
     ../modules/programs/zsh
   ];
