@@ -13,6 +13,8 @@
     ../modules/themes
     ../modules/programs/yazi
     ../modules/programs/zsh
+
+    ../modules/window-managers/hyprland
   ];
 
   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-macchiato;
