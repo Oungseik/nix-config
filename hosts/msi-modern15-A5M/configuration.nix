@@ -16,6 +16,11 @@ in
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
+
   # hardware.bluetooth.enable = true; # enables support for Bluetooth
   # hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
   # services.blueman.enable = true;
@@ -150,6 +155,7 @@ in
     tmux
     unzip
     wget
+    lutris
     libsForQt5.qt5.qtquickcontrols2
     libsForQt5.qt5.qtgraphicaleffects
   ];
@@ -167,6 +173,8 @@ in
       enableAskPassword = false;
       askPassword = "systemd-ask-password";
     };
+
+    gamemode.enable = true;
 
     zsh.enable = true;
     hyprland = { enable = true; };
