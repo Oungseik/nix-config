@@ -10,11 +10,11 @@
 
       cmd_duration.disabled = true;
 
-      dirctory = {
+      directory = {
         truncation_length = 1;
       };
 
-      java.disable = true;
+      java.disabled = true;
 
     };
   };
