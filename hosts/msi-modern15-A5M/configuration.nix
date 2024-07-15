@@ -4,7 +4,7 @@
 
 { config, pkgs, inputs, ... }:
 let
-  sddmTheme = import ../../pkgs/sddm-theme.nix { inherit pkgs; };
+  sddmTheme = import ../../pkgs/sddm-theme { inherit pkgs; };
 in
 {
   imports = [

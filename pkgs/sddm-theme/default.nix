@@ -1,10 +1,5 @@
 { pkgs }:
-let
-  image = pkgs.fetchurl {
-    url = "https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg";
-    sha256 = "02shlqzrw1mrm27wx7nrrv1pv9628iycw9d11zph28q32kdhpvaw";
-  };
-in
+
 pkgs.stdenv.mkDerivation {
   name = "sddm-theme";
   src = pkgs.fetchFromGitHub {
@@ -19,6 +14,6 @@ pkgs.stdenv.mkDerivation {
     cp -R ./* $out
     cd $out
     rm Background.jpg
-    cp -r ${image} $out/Background.jpg
+    cp -r ${./wallpapers/painting-mountain-lake-with-mountain-background.jpg} $out/Background.jpg
   '';
 }
