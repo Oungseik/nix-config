@@ -3,9 +3,12 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, inputs, ... }:
-
+let
+  sddmTheme = import ../../pkgs/sddm-theme.nix { inherit pkgs; };
+in
 {
-  imports = [ # Include the results of the hardware scan.
+  imports = [
+    # Include the results of the hardware scan.
     ./hardware-configuration.nix
   ];
 
@@ -48,16 +51,17 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   # Enable the X11 windowing system.
-  services.xserver.enable = true;
+  services.xserver = {
+    enable = true;
+    xkb = {
+      layout = "us";
+      variant = "";
+    };
+  };
 
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  # services.xserver.desktopManager.gnome.enable = true;
-
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
+  services.displayManager.sddm = {
+    enable = true;
+    theme = "${sddmTheme}";
   };
 
   # Enable CUPS to print documents.
@@ -85,57 +89,55 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-  users.defaultUserShell = pkgs.zsh;
+  users = {
+    defaultUserShell = pkgs.zsh;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.oung = {
-    isNormalUser = true;
-    description = "Min Aung Thu Win";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
-    packages = with pkgs; [
-      brightnessctl
-      dunst
-      evince
-      fd
-      firefox
-      hyprland
-      hyprlock
-      gammastep
-      google-chrome
-      gnumake
-      grim
-      # inputs.helix.packages.${pkgs.system}.helix
-      kitty
-      lunarvim
-      libnotify
-      nekoray
-      nodejs_20
-      pavucontrol
-      python3
-      python311Packages.pip
-      python311Packages.pynvim
-      vscode
-      rofi
-      rustup
-      slurp
-      starship
-      waybar
-      wl-clipboard
-    ];
+    # Define a user account. Don't forget to set a password with ‘passwd’.
+    users.oung = {
+      isNormalUser = true;
+      description = "Min Aung Thu Win";
+      extraGroups = [ "networkmanager" "wheel" "docker" ];
+      packages = with pkgs; [
+        brightnessctl
+        dunst
+        evince
+        fd
+        firefox
+        hyprland
+        hyprlock
+        gammastep
+        google-chrome
+        gnumake
+        grim
+        # inputs.helix.packages.${pkgs.system}.helix
+        kitty
+        lunarvim
+        libnotify
+        nekoray
+        nodejs_20
+        pavucontrol
+        python3
+        python311Packages.pip
+        python311Packages.pynvim
+        vscode
+        rofi
+        rustup
+        slurp
+        starship
+        waybar
+        wl-clipboard
+      ];
+    };
   };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  fonts.packages = with pkgs;
-    [
-      # (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
-    ];
+  # fonts.packages = with pkgs; [ (nerdfonts.override { fonts = [ "JetBrainsMono" ]; }) ];
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    amberol
     curl
     clang
     deja-dup
@@ -148,7 +150,6 @@
     tmux
     unzip
     wget
-    xsel
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -159,11 +160,16 @@
   #   enableSSHSupport = true;
   # };
 
-  programs.ssh.enableAskPassword = false;
-  programs.ssh.askPassword = "systemd-ask-password";
-  programs.zsh.enable = true;
-  programs.hyprland = { enable = true; };
-  programs.gdk-pixbuf.modulePackages = [ pkgs.librsvg ];
+  programs = {
+    ssh = {
+      enableAskPassword = false;
+      askPassword = "systemd-ask-password";
+    };
+
+    zsh.enable = true;
+    hyprland = { enable = true; };
+    gdk-pixbuf.modulePackages = [ pkgs.librsvg ];
+  };
 
   xdg.portal = {
     enable = true;
@@ -182,11 +188,5 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
-  # This value determines the NixOS release from which the default
-  # settings for stateful data, like file locations and database versions
-  # on your system were taken. It‘s perfectly fine and recommended to leave
-  # this value at the release version of the first install of this system.
-  # Before changing this value read the documentation for this option
-  # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "23.11"; # Did you read the comment?
+  system.stateVersion = "23.11";
 }
