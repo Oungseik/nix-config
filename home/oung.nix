@@ -11,11 +11,14 @@
     # ../modules/programs/starship
     ../modules/programs/wofi
     ../modules/programs/yazi
+
+    ../modules/themes
   ];
 
   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-macchiato;
 
   programs = {
+    fastfetch.enable = true;
     wofi.enable = true;
     yazi.enable = true;
   };
