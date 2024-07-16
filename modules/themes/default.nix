@@ -14,6 +14,11 @@
 
     # iconTheme.package = gruvboxPlus;
     # iconTheme.name = "GruvboxPlus";
+
+    font = {
+      name = "RobotoCondensed";
+      size = 12;
+    };
   };
 
   qt = {
