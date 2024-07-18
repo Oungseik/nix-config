@@ -75,7 +75,6 @@ in
   services.udisks2.enable = true;
 
   # Enable sound with pipewire.
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -155,7 +154,6 @@ in
     tmux
     unzip
     wget
-    lutris
     libsForQt5.qt5.qtquickcontrols2
     libsForQt5.qt5.qtgraphicaleffects
   ];
