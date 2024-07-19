@@ -29,8 +29,9 @@
   };
 
   home.packages = with pkgs; [
-    # inputs.nixvim.packages.${system}.default
     # (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    # inputs.nixvim.packages.${system}.default
+
     proxychains
     nix-prefetch-git
     age
