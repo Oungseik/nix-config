@@ -9,6 +9,7 @@
 
     ../modules/programs/alacritty
     # ../modules/programs/starship
+    ../modules/programs/eza
     ../modules/programs/wofi
     ../modules/programs/yazi
 
