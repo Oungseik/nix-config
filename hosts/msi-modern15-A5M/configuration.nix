@@ -25,8 +25,6 @@ in
   # hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
   # services.blueman.enable = true;
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
   virtualisation.docker.rootless = {
     enable = true;
     setSocketVariable = true;
@@ -196,5 +194,14 @@ in
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
+  nix = {
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 1w";
+    };
+    settings.auto-optimise-store = true;
+    settings.experimental-features = [ "nix-command" "flakes" ];
+  };
   system.stateVersion = "23.11";
 }
