@@ -33,6 +33,7 @@
     # (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     # inputs.nixvim.packages.${system}.default
 
+    hyprpaper
     proxychains
     nix-prefetch-git
     age
@@ -46,7 +47,7 @@
 
   home.sessionVariables = { EDITOR = "nvim"; };
 
-  home.stateVersion = "24.05";
+  home.stateVersion = "24.11";
 
   # Let home Manager install and manage itself.
   programs.home-manager.enable = true;
