@@ -1,7 +1,7 @@
 { ... }: {
   programs.git = {
-    userName = "Ryan Yin";
-    userEmail = "xiaoyin_c@qq.com";
+    userName = "Min Aung Thu Win";
+    userEmail = "mhemaungthuwin@gmail.com";
     extraConfig = {
       global = {
         userName = "Min Aung Thu Win";
