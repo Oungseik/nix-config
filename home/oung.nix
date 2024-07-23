@@ -8,8 +8,9 @@
     inputs.nix-colors.homeManagerModules.default
 
     ../modules/programs/alacritty
-    # ../modules/programs/starship
     ../modules/programs/eza
+    ../modules/programs/kitty
+    # ../modules/programs/starship
     ../modules/programs/wofi
     ../modules/programs/yazi
 
@@ -20,6 +21,7 @@
 
   programs = {
     fastfetch.enable = true;
+    kitty.enable = true;
     wofi.enable = true;
     yazi.enable = true;
   };
@@ -33,14 +35,17 @@
     # (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     # inputs.nixvim.packages.${system}.default
 
-    hyprpaper
-    proxychains
-    nix-prefetch-git
     age
     go
-    ssh-to-age
+    htop
+    hyprpaper
     jq
+    lunarvim
+    nix-prefetch-git
+    proxychains
     ripgrep
+    ssh-to-age
+    tmux
     unzip
     zip
   ];

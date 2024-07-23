@@ -53,24 +53,26 @@ in
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 
-  # Enable the X11 windowing system.
-  services.xserver = {
-    enable = true;
-    xkb = {
-      layout = "us";
-      variant = "";
+  services = {
+    # Enable the X11 windowing system.
+    xserver = {
+      enable = true;
+      xkb = {
+        layout = "us";
+        variant = "";
+      };
     };
-  };
 
-  services.displayManager.sddm = {
-    enable = true;
-    theme = "${sddmTheme}";
-  };
+    displayManager.sddm = {
+      enable = true;
+      theme = "${sddmTheme}";
+    };
 
-  # Enable CUPS to print documents.
-  # services.printing.enable = true;
-  services.gvfs.enable = true;
-  services.udisks2.enable = true;
+    # Enable CUPS to print documents.
+    # printing.enable = true;
+    gvfs.enable = true;
+    udisks2.enable = true;
+  };
 
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
@@ -101,7 +103,6 @@ in
       extraGroups = [ "networkmanager" "wheel" "docker" ];
       packages = with pkgs; [
         brightnessctl
-        dunst
         evince
         fd
         firefox
@@ -112,15 +113,12 @@ in
         gnumake
         grim
         # inputs.helix.packages.${pkgs.system}.helix
-        kitty
-        lunarvim
         libnotify
         nekoray
         nodejs_20
         pavucontrol
         python3
         python311Packages.pip
-        python311Packages.pynvim
         vscode
         rofi
         rustup
@@ -146,10 +144,8 @@ in
     gcc
     git
     home-manager
-    htop
     openvpn
     playerctl
-    tmux
     unzip
     wget
     libsForQt5.qt5.qtquickcontrols2
