@@ -1,5 +1,5 @@
-{ pkgs, ... }: {
-
+{ pkgs, ... }:
+{
   gtk = {
     enable = true;
     theme = {
@@ -12,8 +12,8 @@
       name = "Bibata-Modern-Ice";
     };
 
-    # iconTheme.package = gruvboxPlus;
-    # iconTheme.name = "GruvboxPlus";
+    iconTheme.package = pkgs.kora-icon-theme;
+    iconTheme.name = "Kora";
 
     font = {
       name = "Roboto";
