@@ -7,28 +7,22 @@
   imports = [
     inputs.nix-colors.homeManagerModules.default
 
-    ../modules/programs/alacritty
     ../modules/programs/eza
-    ../modules/programs/kitty
     # ../modules/programs/starship
     ../modules/programs/wofi
     ../modules/programs/yazi
 
+    ../modules/terminals
     ../modules/themes
+    ../modules/xresources
   ];
 
   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-macchiato;
 
   programs = {
     fastfetch.enable = true;
-    kitty.enable = true;
     wofi.enable = true;
     yazi.enable = true;
-  };
-
-  xresources.properties = {
-    "Xcursor.size" = 16;
-    "Xft.dpi" = 96;
   };
 
   home.packages = with pkgs; [
