@@ -5,7 +5,7 @@ pkgs.stdenv.mkDerivation {
 
   src = pkgs.fetchurl {
     url = "https://github.com/SylEleuth/gruvbox-plus-icon-pack/releases/download/v5.4.0/gruvbox-plus-icon-pack-5.4.zip";
-    hash = "sha256-1zpr9ha5x3546ms8gqhzs8j7inhz1j4disap7s897zmfipj88zd5=";
+    sha256 = "1zpr9ha5x3546ms8gqhzs8j7inhz1j4disap7s897zmfipj88zd5";
   };
 
   dontUnpack = true;
