@@ -31,6 +31,7 @@
 
     age
     brightnessctl
+    btop
     deja-dup
     evince
     eww
@@ -41,7 +42,6 @@
     google-chrome
     gnumake
     grim
-    htop
     hyprlock
     hyprpaper
     jq
