@@ -30,18 +30,38 @@
     # inputs.nixvim.packages.${system}.default
 
     age
+    brightnessctl
+    deja-dup
+    evince
     eww
+    fd
+    firefox
+    gammastep
     go
+    google-chrome
+    gnumake
+    grim
     htop
+    hyprlock
     hyprpaper
     jq
     lunarvim
+    nekoray
     nix-prefetch-git
+    nodejs_20
+    pavucontrol
+    playerctl
     proxychains
     ripgrep
+    rofi
+    rustup
+    slurp
     ssh-to-age
     tmux
     unzip
+    vscode
+    waybar
+    wl-clipboard
     zip
   ];
 

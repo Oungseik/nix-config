@@ -101,32 +101,7 @@ in
       isNormalUser = true;
       description = "Min Aung Thu Win";
       extraGroups = [ "networkmanager" "wheel" "docker" ];
-      packages = with pkgs; [
-        brightnessctl
-        evince
-        fd
-        firefox
-        hyprland
-        hyprlock
-        gammastep
-        google-chrome
-        gnumake
-        grim
-        # inputs.helix.packages.${pkgs.system}.helix
-        libnotify
-        nekoray
-        nodejs_20
-        pavucontrol
-        python3
-        python311Packages.pip
-        vscode
-        rofi
-        rustup
-        slurp
-        starship
-        waybar
-        wl-clipboard
-      ];
+      packages = [ ];
     };
   };
 
@@ -140,13 +115,10 @@ in
   environment.systemPackages = with pkgs; [
     curl
     clang
-    deja-dup
     gcc
     git
     home-manager
     openvpn
-    playerctl
-    unzip
     wget
     libsForQt5.qt5.qtquickcontrols2
     libsForQt5.qt5.qtgraphicaleffects
