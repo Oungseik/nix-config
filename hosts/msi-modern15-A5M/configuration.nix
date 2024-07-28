@@ -37,15 +37,15 @@ in
   };
   users.extraGroups.vboxusers.members = [ "oung" ];
 
-  networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  networking = {
+    hostName = "nixos"; # Define your hostname.
+    networkmanager.enable = true; # Enable networking
+    # wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
-  # Configure network proxy if necessary
-  # networking.proxy.default = "127.0.0.1:2081";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Enable networking
-  networking.networkmanager.enable = true;
+    # Configure network proxy if necessary
+    proxy.default = "127.0.0.1:2081";
+    proxy.noProxy = "127.0.0.1,192.168.*.*:*,192.168.99.252:*,localhost,internal.domain,youtube.com,teams.microsoft.com,reddit.com";
+  };
 
   # Set your time zone.
   time.timeZone = "Asia/Yangon";
