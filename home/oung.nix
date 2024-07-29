@@ -11,6 +11,7 @@
     # ../modules/programs/starship
     ../modules/programs/wofi
     ../modules/programs/yazi
+    ../modules/programs/zathura
 
     ../modules/terminals
     ../modules/themes
@@ -50,6 +51,7 @@
     nix-prefetch-git
     nodejs_20
     pavucontrol
+    pcsx2
     playerctl
     proxychains
     ripgrep
@@ -62,7 +64,10 @@
     vscode
     waybar
     wl-clipboard
+    zig
+    zls
     zip
+
   ];
 
   home.sessionVariables = { EDITOR = "nvim"; };
