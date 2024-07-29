@@ -44,7 +44,7 @@ in
 
     # Configure network proxy if necessary
     proxy.default = "127.0.0.1:2081";
-    proxy.noProxy = "127.0.0.1,192.168.*.*:*,192.168.99.252:*,localhost,internal.domain,youtube.com,teams.microsoft.com,reddit.com";
+    proxy.noProxy = "127.0.0.1,192.168.*.*:*,192.168.99.252:*,localhost,internal.domain,youtube.com,teams.microsoft.com,microsoft.com,reddit.com";
   };
 
   # Set your time zone.
