@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, lib, ... }:
 let
   sddmTheme = import ../../pkgs/sddm-theme { inherit pkgs; };
 in
@@ -44,7 +44,31 @@ in
 
     # Configure network proxy if necessary
     proxy.default = "127.0.0.1:2081";
-    proxy.noProxy = "127.0.0.1,192.168.*.*:*,192.168.99.252:*,localhost,internal.domain,youtube.com,teams.microsoft.com,microsoft.com,reddit.com";
+    # proxy.noProxy = "127.0.0.1,192.168.*.*:*,192.168.99.252:*,localhost,internal.domain,youtube.com,teams.microsoft.com,microsoft.com,reddit.com";
+    proxy.noProxy = lib.strings.concatStringsSep "," [
+      "127.0.0.1"
+      "192.168.*"
+      "localhost"
+      "internal.domain"
+      "youtube.com"
+      "teams.microsoft.com"
+      "microsoft.com"
+      "reddit.com"
+
+      "cloud.langfuse.com"
+      "api.openai.com"
+      "openai.com"
+      "api-inference.huggingface.co"
+      "huggingface.co"
+      "registry.npmjs.org"
+      "npmjs.org"
+      "api.cohere.com"
+      "cohere.com"
+      "generativelanguage.googleapis.com"
+      "googleapis.com"
+      "api.anthropic.com"
+      "anthropic.com"
+    ];
   };
 
   # Set your time zone.

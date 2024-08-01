@@ -4,6 +4,16 @@
     font.size = 13;
 
     theme = "Catppuccin-Macchiato";
+
+    keybindings = {
+      "ctrl+shift+h" = "no_op";
+      "ctrl+shift+l" = "no_op";
+      "ctrl+shift+x" = "no_op";
+      "ctrl+shift+z" = "no_op";
+      "ctrl+shift+g" = "no_op";
+    };
+
+
     settings = {
       cursor_beam_thinkness = 1;
       cursor_blink_interval = 0;
