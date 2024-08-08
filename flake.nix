@@ -10,12 +10,12 @@
 
     nixvim.url = "github:Oungseik/nixvim";
     nix-colors.url = "github:misterio77/nix-colors";
+    helix.url = "github:helix-editor/helix/master";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
-    let laptop = "msi-modern15-A5M";
-    in {
-      nixosConfigurations."${laptop}" = nixpkgs.lib.nixosSystem {
+  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
+    nixosConfigurations = {
+      "msi-modern15-A5M" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
@@ -33,33 +33,20 @@
         ];
       };
 
-      nixosConfigurations = {
-        "virtualbox" = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          specialArgs = { inherit inputs; };
-          modules = [ ./hosts/virtualbox/configuration.nix ];
-        };
-
-        "asus-series-A56C" = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          specialArgs = { inherit inputs; };
-          modules = [ ./hosts/asus-series-A56C/configuration.nix ];
-        };
-
+      "asus-series-A56C" = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [ ./hosts/asus-series-A56C/configuration.nix ];
       };
 
-      homeConfigurations = {
-        astro = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          extraSpecialArgs = { inherit inputs; };
-          modules = [ ./home/astro.nix ];
-        };
+    };
 
-        oung = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          extraSpecialArgs = { inherit inputs; };
-          modules = [ ./home/oung.nix ];
-        };
+    homeConfigurations = {
+      oung = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        extraSpecialArgs = { inherit inputs; };
+        modules = [ ./home/oung.nix ];
       };
     };
+  };
 }
