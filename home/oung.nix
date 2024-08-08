@@ -7,15 +7,15 @@
   imports = [
     inputs.nix-colors.homeManagerModules.default
 
-    ../modules/programs/eza
-    # ../modules/programs/starship
-    ../modules/programs/wofi
-    ../modules/programs/yazi
-    ../modules/programs/zathura
-
+    ../modules/cli
+    ../modules/notification
     ../modules/terminals
     ../modules/themes
     ../modules/xresources
+
+    # ../modules/programs/starship
+    ../modules/programs/wofi
+    ../modules/programs/zathura
   ];
 
   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-macchiato;
@@ -23,12 +23,11 @@
   programs = {
     fastfetch.enable = true;
     wofi.enable = true;
-    yazi.enable = true;
   };
 
   home.packages = with pkgs; [
-    # (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
-    # inputs.nixvim.packages.${system}.default
+    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    inputs.nixvim.packages.${system}.default
 
     age
     brightnessctl
@@ -55,7 +54,6 @@
     playerctl
     proxychains
     ripgrep
-    rofi
     rustup
     slurp
     ssh-to-age
@@ -67,10 +65,12 @@
     zig
     zls
     zip
-
   ];
 
-  home.sessionVariables = { EDITOR = "nvim"; };
+  home.sessionVariables = {
+    EDITOR = "nvim";
+    RUSTUP_TOOLCHAIN = "stable";
+  };
 
   home.stateVersion = "24.11";
 

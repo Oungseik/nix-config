@@ -13,12 +13,14 @@
       ".venv"
     ];
 
-    language = [
-      {
-        name = "rust";
-        auto-format = true;
-      }
-    ];
+    languages = {
+      language = [
+        {
+          name = "rust";
+          auto-format = true;
+        }
+      ];
+    };
 
     settings = {
       theme = "catppuccin-macchiato";
