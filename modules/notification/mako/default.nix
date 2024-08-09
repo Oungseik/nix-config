@@ -14,6 +14,7 @@
     textColor = "#${base05}"; # maybe base04
     borderColor = "#${base0D}";
     progressColor = "over #${base02}";
+    maxIconSize = 40;
 
     extraConfig = ''
       [urgency=high]
