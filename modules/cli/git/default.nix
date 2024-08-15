@@ -9,7 +9,7 @@
       };
 
       format = {
-        pretty = "%C(yellow)%h%C(reset) %C(blue)%ad%C(reset) | %s%d [%an]";
+        pretty = "[%C(yellow)%h%C(reset)] %C(blue)%ad%C(reset) | %s%d [%an]";
       };
 
       log = {

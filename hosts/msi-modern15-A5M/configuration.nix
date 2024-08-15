@@ -47,7 +47,7 @@ in
     # proxy.noProxy = "127.0.0.1,192.168.*.*:*,192.168.99.252:*,localhost,internal.domain,youtube.com,teams.microsoft.com,microsoft.com,reddit.com";
     proxy.noProxy = lib.strings.concatStringsSep "," [
       "127.0.0.1"
-      "192.168.*"
+      "192.168.99.192"
       "localhost"
       "internal.domain"
       "youtube.com"

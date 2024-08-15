@@ -10,7 +10,7 @@
 
     nixvim.url = "github:Oungseik/nixvim";
     nix-colors.url = "github:misterio77/nix-colors";
-    helix.url = "github:helix-editor/helix/master";
+    # helix.url = "github:helix-editor/helix/master";
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs: {

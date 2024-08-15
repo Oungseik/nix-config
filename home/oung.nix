@@ -30,6 +30,7 @@
     inputs.nixvim.packages.${system}.default
 
     age
+    bat
     brightnessctl
     btop
     deja-dup
