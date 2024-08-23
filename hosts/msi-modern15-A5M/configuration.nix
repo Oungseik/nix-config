@@ -2,7 +2,13 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, lib, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  lib,
+  ...
+}:
 let
   sddmTheme = import ../../pkgs/sddm-theme { inherit pkgs; };
 in
@@ -21,9 +27,23 @@ in
     enable32Bit = true;
   };
 
-  # hardware.bluetooth.enable = true; # enables support for Bluetooth
-  # hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
-  # services.blueman.enable = true;
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+    settings = {
+      General.Experimental = true;
+    };
+  };
+  services.blueman.enable = true;
+  systemd.user.services.mpris-proxy = {
+    description = "Mpris proxy";
+    after = [
+      "network.target"
+      "sound.target"
+    ];
+    wantedBy = [ "default.target" ];
+    serviceConfig.ExecStart = "${pkgs.bluez}/bin/mpris-proxy";
+  };
 
   virtualisation.docker.rootless = {
     enable = true;
@@ -48,6 +68,7 @@ in
     proxy.noProxy = lib.strings.concatStringsSep "," [
       "127.0.0.1"
       "192.168.99.192"
+      "192.168.0.{0..255}"
       "localhost"
       "internal.domain"
       "youtube.com"
@@ -124,7 +145,11 @@ in
     users.oung = {
       isNormalUser = true;
       description = "Min Aung Thu Win";
-      extraGroups = [ "networkmanager" "wheel" "docker" ];
+      extraGroups = [
+        "networkmanager"
+        "wheel"
+        "docker"
+      ];
       packages = [ ];
     };
   };
@@ -165,7 +190,9 @@ in
     gamemode.enable = true;
 
     zsh.enable = true;
-    hyprland = { enable = true; };
+    hyprland = {
+      enable = true;
+    };
     gdk-pixbuf.modulePackages = [ pkgs.librsvg ];
   };
 
@@ -193,7 +220,10 @@ in
       options = "--delete-older-than 1w";
     };
     settings.auto-optimise-store = true;
-    settings.experimental-features = [ "nix-command" "flakes" ];
+    settings.experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
   };
   system.stateVersion = "23.11";
 }
