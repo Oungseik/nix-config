@@ -3,8 +3,8 @@ let
   plugins-repo = pkgs.fetchFromGitHub {
     owner = "yazi-rs";
     repo = "plugins";
-    rev = "06e5fe1c7a2a4009c483b28b298700590e7b6784";
-    hash = "sha256-jg8+GDsHOSIh8QPYxCvMde1c1D9M78El0PljSerkLQc=";
+    rev = "b6597919540731691158831bf1ff36ed38c1964e";
+    hash = "sha256-clyhjvIhhSaWDLGDE+dA8+lxE3fZwo9GI1pVRDQ4tR0=";
   };
   starship = pkgs.fetchFromGitHub {
     owner = "Rolv-Apneseth";
@@ -36,6 +36,10 @@ in
     };
 
     initLua = ''
+      require("full-border"):setup {
+      	-- Available values: ui.Border.PLAIN, ui.Border.ROUNDED
+      	type = ui.Border.ROUNDED,
+      }
     '';
   };
 }
