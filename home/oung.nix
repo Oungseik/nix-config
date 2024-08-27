@@ -1,4 +1,5 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, inputs, ... }:
+{
   home = {
     username = "oung";
     homeDirectory = "/home/oung";
@@ -13,7 +14,6 @@
     ../modules/themes
     ../modules/xresources
 
-    # ../modules/programs/starship
     ../modules/programs/wofi
     ../modules/programs/zathura
   ];
