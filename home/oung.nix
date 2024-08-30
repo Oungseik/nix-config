@@ -32,7 +32,6 @@
     age
     bat
     brightnessctl
-    btop
     deja-dup
     evince
     eww
@@ -59,6 +58,7 @@
     slurp
     ssh-to-age
     tmux
+    tun2socks
     unzip
     vscode
     waybar

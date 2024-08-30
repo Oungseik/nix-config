@@ -1,6 +1,7 @@
 { ... }:
 {
   imports = [
+    ./btop
     ./eza
     ./git
     ./helix
@@ -11,6 +12,7 @@
   ];
 
   programs = {
+    btop.enable = true;
     eza.enable = true;
     git.enable = true;
     helix.enable = false;
