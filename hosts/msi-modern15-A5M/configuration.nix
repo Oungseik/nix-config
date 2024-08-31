@@ -214,11 +214,11 @@ in
   # networking.firewall.enable = false;
 
   nix = {
-    gc = {
-      automatic = true;
-      dates = "weekly";
-      options = "--delete-older-than 1w";
-    };
+    # gc = {
+    #   automatic = true;
+    #   dates = "weekly";
+    #   options = "--delete-older-than 1w";
+    # };
     settings.auto-optimise-store = true;
     settings.experimental-features = [
       "nix-command"
