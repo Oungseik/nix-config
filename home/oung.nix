@@ -14,6 +14,7 @@
     ../modules/themes
     ../modules/xresources
 
+    ../modules/statusbar
     ../modules/programs/wofi
     ../modules/programs/zathura
   ];
