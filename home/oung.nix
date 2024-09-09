@@ -43,7 +43,7 @@
     gnumake
     grim
     hyprlock
-    hyprpaper
+    # hyprpaper
     jq
     lunarvim
     nekoray

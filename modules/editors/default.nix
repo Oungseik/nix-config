@@ -1,3 +1,7 @@
-{ ... }: {
-  imports = [ ./helix ];
+{ ... }:
+{
+  imports = [
+    ./helix
+    # ./neovide # not exist yet
+  ];
 }
