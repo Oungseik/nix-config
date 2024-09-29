@@ -1,9 +1,10 @@
 { ... }:
 {
   programs.neovide.settings = {
+    theme = "auto";
     font = {
       normal = [ "JetBrainsMono NF" ];
-      size = 14.0;
+      size = 13.0;
     };
 
   };

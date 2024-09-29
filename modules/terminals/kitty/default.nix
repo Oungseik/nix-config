@@ -4,7 +4,7 @@
     font.name = "JetBrainsMono NF";
     font.size = 13;
 
-    theme = "Catppuccin-Macchiato";
+    themeFile = "Catppuccin-Macchiato";
 
     keybindings = {
       "ctrl+shift+h" = "no_op";

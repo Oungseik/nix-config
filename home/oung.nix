@@ -9,6 +9,7 @@
     inputs.nix-colors.homeManagerModules.default
 
     ../modules/cli
+    ../modules/editors
     ../modules/notification
     ../modules/terminals
     ../modules/themes
@@ -22,6 +23,7 @@
 
   programs = {
     fastfetch.enable = true;
+    neovide.enable = true;
     wofi.enable = true;
   };
 
