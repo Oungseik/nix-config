@@ -35,6 +35,7 @@
     deja-dup
     evince
     eww
+    exercism
     fd
     firefox
     gammastep
@@ -45,12 +46,14 @@
     hyprlock
     hyprpaper
     jq
-    lunarvim
+    # lunarvim
     nekoray
     nix-prefetch-git
     nodejs_20
+    openssl
     pavucontrol
     pcsx2
+    pkg-config
     playerctl
     proxychains
     ripgrep

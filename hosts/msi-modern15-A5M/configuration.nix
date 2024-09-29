@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 let
   sddmTheme = import ../../pkgs/sddm-theme { inherit pkgs; };
 in
@@ -39,16 +39,18 @@ in
     serviceConfig.ExecStart = "${pkgs.bluez}/bin/mpris-proxy";
   };
 
-  virtualisation.docker.rootless = {
-    enable = true;
-    setSocketVariable = true;
+  virtualisation = {
+    docker.rootless = {
+      enable = true;
+      setSocketVariable = true;
+    };
+    # virtualbox = {
+    #   host.enable = true;
+    #   guest.enable = true;
+    #   guest.dragAndDrop = true;
+    # };
   };
 
-  virtualisation.virtualbox = {
-    host.enable = true;
-    guest.enable = true;
-    guest.dragAndDrop = true;
-  };
   users.extraGroups.vboxusers.members = [ "oung" ];
 
   networking = {
@@ -63,6 +65,7 @@ in
       "127.0.0.1"
       "192.168.99.192"
       "192.168.0.{0..255}"
+      "103.186.240.90"
       "localhost"
       "internal.domain"
       "youtube.com"
@@ -183,11 +186,9 @@ in
 
     gamemode.enable = true;
 
-    zsh.enable = true;
-    hyprland = {
-      enable = true;
-    };
+    hyprland.enable = true;
     gdk-pixbuf.modulePackages = [ pkgs.librsvg ];
+    zsh.enable = true;
   };
 
   xdg.portal = {
