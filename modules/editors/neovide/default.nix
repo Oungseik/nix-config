@@ -4,9 +4,7 @@
     theme = "auto";
     font = {
       normal = [ "JetBrainsMono NF" ];
-      size = 13.0;
+      size = 13;
     };
-
   };
-
 }
