@@ -45,10 +45,12 @@
     google-chrome
     gnumake
     grim
+    hurl
     hyprlock
     hyprpaper
     jq
     # lunarvim
+    mongodb-compass
     nekoray
     nix-prefetch-git
     nodejs_20
@@ -62,6 +64,7 @@
     rustup
     slurp
     ssh-to-age
+    stack
     tmux
     tun2socks
     unzip
