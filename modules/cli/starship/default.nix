@@ -49,7 +49,7 @@
       raku.disabled = true;
       red.disabled = true;
       ruby.disabled = true;
-      scalar.disabled = true;
+      scala.disabled = true;
       singularity.disabled = true;
       spack.disabled = true;
       swift.disabled = true;
