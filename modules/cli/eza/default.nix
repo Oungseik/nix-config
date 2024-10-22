@@ -1,11 +1,13 @@
-{ ... }: {
+{ ... }:
+{
   programs.eza = {
     enableBashIntegration = true;
     enableZshIntegration = true;
 
-    icons = true;
+    icons = "auto";
 
-    extraOptions = [
-    ];
+    extraOptions =
+      [
+      ];
   };
 }
