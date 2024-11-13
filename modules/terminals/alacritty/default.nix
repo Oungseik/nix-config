@@ -1,22 +1,27 @@
-{ config, ... }: {
+{ config, ... }:
+{
   programs.alacritty.settings = {
     font = {
-      size = 13;
+      size = 14;
       normal = {
-        family = "JetBrainsMono NF";
+        family = "ZedMono Nerd Font";
         style = "Regular";
       };
       offset.x = 0;
       offset.y = 0;
     };
 
-    keyboard.bindings = [{
-      action = "CreateNewWindow";
-      key = "N";
-      mods = "Shift|Control";
-    }];
+    keyboard.bindings = [
+      {
+        action = "CreateNewWindow";
+        key = "N";
+        mods = "Shift|Control";
+      }
+    ];
 
-    window = { opacity = 0.95; };
+    window = {
+      opacity = 0.95;
+    };
 
     colors = with config.colorScheme.palette; {
       indexed_colors = [

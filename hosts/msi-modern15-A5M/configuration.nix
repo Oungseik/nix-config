@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 let
   sddmTheme = import ../../pkgs/sddm-theme { inherit pkgs; };
 in
@@ -60,7 +60,6 @@ in
 
     # Configure network proxy if necessary
     proxy.default = "127.0.0.1:2081";
-    # proxy.noProxy = "127.0.0.1,192.168.*.*:*,192.168.99.252:*,localhost,internal.domain,youtube.com,teams.microsoft.com,microsoft.com,reddit.com";
     proxy.noProxy = lib.strings.concatStringsSep "," [
       "127.0.0.1"
       "192.168.99.192"
@@ -162,6 +161,7 @@ in
     curl
     clang
     gcc
+    rustup
     git
     home-manager
     openvpn

@@ -28,7 +28,12 @@
   };
 
   home.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    (nerdfonts.override {
+      fonts = [
+        "JetBrainsMono"
+        "ZedMono"
+      ];
+    })
     inputs.nixvim.packages.${system}.default
 
     age
@@ -41,10 +46,12 @@
     fd
     firefox
     gammastep
+    ghc
     go
     google-chrome
     gnumake
     grim
+    haskellPackages.haskell-language-server
     hurl
     hyprlock
     hyprpaper
@@ -61,7 +68,6 @@
     playerctl
     proxychains
     ripgrep
-    rustup
     slurp
     ssh-to-age
     stack

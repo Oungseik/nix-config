@@ -3,7 +3,10 @@
   programs.neovide.settings = {
     theme = "auto";
     font = {
-      normal = [ "JetBrainsMono NF" ];
+      normal = [
+        "GoMono Nerd Font"
+        "JetBrainsMono NF"
+      ];
       size = 13;
     };
   };
