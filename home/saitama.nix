@@ -38,6 +38,9 @@
 
     # optional for testCanvas
     ffmpeg
+    mongodb-compass
+    redis
+    rethinkdb
   ];
 
   services = {
