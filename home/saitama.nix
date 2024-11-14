@@ -26,6 +26,7 @@
     (nerdfonts.override { fonts = [ "ZedMono" ]; })
     inputs.nixvim.packages.${system}.default
 
+    # necessary
     bat
     brightnessctl
     nodejs_22
@@ -34,6 +35,9 @@
     nix-prefetch-git
 
     libglvnd
+
+    # optional for testCanvas
+    ffmpeg
   ];
 
   services = {

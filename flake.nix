@@ -66,7 +66,7 @@
           extraSpecialArgs = {
             inherit inputs;
           };
-          modules = [./home/saitama.nix];
+          modules = [ ./home/saitama.nix ];
         };
       };
     };
