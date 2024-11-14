@@ -1,8 +1,8 @@
 { ... }:
 {
   programs.kitty = {
-    font.name = "JetBrainsMono NF";
-    font.size = 13;
+    font.name = "ZedMono NF";
+    font.size = 14;
 
     themeFile = "Catppuccin-Macchiato";
 
