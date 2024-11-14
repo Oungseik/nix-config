@@ -7,16 +7,24 @@
 
   imports = [
     inputs.nix-colors.homeManagerModules.default
+    ../modules/cli
   ];
 
   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-macchiato;
 
-  programs = {};
+  programs = {
+    tmux.enable = true;
+  };
 
   home.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "ZedMono" ]; })
     inputs.nixvim.packages.${system}.default
 
+    bat
+    brightnessctl
+    ripgrep
+
+    nix-prefetch-git
   ];
 
   home.sessionVariables = {
