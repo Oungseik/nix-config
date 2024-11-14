@@ -7,13 +7,19 @@
 
   imports = [
     inputs.nix-colors.homeManagerModules.default
+
     ../modules/cli
+    ../modules/terminals
+
+    ../modules/window-managers/picom
   ];
 
   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-macchiato;
 
   programs = {
+    starship.enable = true;
     tmux.enable = true;
+    zsh.enable = true;
   };
 
   home.packages = with pkgs; [
@@ -22,10 +28,21 @@
 
     bat
     brightnessctl
+    nodejs_22
     ripgrep
 
     nix-prefetch-git
+
+    libglvnd
   ];
+
+  services = {
+    picom.enable = true;
+  };
+
+  xsession.windowManager = {
+    bspwm.enable = true;
+  };
 
   home.sessionVariables = {
     EDITOR = "nvim";
