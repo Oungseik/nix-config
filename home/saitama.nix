@@ -46,7 +46,7 @@
   ];
 
   services = {
-    picom.enable = true;
+    # picom.enable = true;
   };
 
   xsession.windowManager = {
