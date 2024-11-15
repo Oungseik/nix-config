@@ -10,7 +10,6 @@ in
 {
   # hyprland - Tiling compositor with the looks
   wayland.windowManager.hyprland = {
-    enable = true;
 
     settings = {
       "$mod" = "SUPER";
@@ -79,9 +78,13 @@ in
         mfact = "+0.625";
       };
 
-      gestures = { workspace_swipe = true; };
+      gestures = {
+        workspace_swipe = true;
+      };
 
-      misc = { force_default_wallpaper = 2; };
+      misc = {
+        force_default_wallpaper = 2;
+      };
 
       bind = [
         "$mod, RETURN, exec, ${terminal}"
@@ -103,10 +106,8 @@ in
         ", f10, exec, brightnessctl set +5% "
 
         # Screenshot and save to a file
-        ''
-          , Print, exec, IMG=$HOME/Pictures/Screenshots/$(date +'%s_grim.png') && ${grim} -c -o "$(hyprctl activeworkspace -j | ${jq} -r '.monitor')" $IMG && wl-copy < $IMG''
-        ''
-          $mod, Print, exec, IMG=$HOME/Pictures/Screenshots/$(date +'%s_grim.png') && ${grim} -c -g "$(${slurp})" $IMG && wl-copy < $IMG''
+        '', Print, exec, IMG=$HOME/Pictures/Screenshots/$(date +'%s_grim.png') && ${grim} -c -o "$(hyprctl activeworkspace -j | ${jq} -r '.monitor')" $IMG && wl-copy < $IMG''
+        ''$mod, Print, exec, IMG=$HOME/Pictures/Screenshots/$(date +'%s_grim.png') && ${grim} -c -g "$(${slurp})" $IMG && wl-copy < $IMG''
 
         # Layout Messages Dispatchers
         "$mod, j, layoutmsg, cyclenext"
@@ -154,12 +155,14 @@ in
         "$mod SHIFT, l, focusmonitor, +1 "
       ];
 
-      bindm = [ "$mod, mouse:272, movewindow" "$mod, mouse:273, resizewindow" ];
+      bindm = [
+        "$mod, mouse:272, movewindow"
+        "$mod, mouse:273, resizewindow"
+      ];
 
     };
 
-    extraConfig = ''
-    '';
+    extraConfig = '''';
   };
 
   home.file = {

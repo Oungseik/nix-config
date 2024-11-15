@@ -12,7 +12,7 @@
     ../modules/terminals
     ../modules/themes
 
-    ../modules/window-managers/picom
+    ../modules/window-managers
   ];
 
   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-macchiato;
@@ -51,6 +51,10 @@
 
   xsession.windowManager = {
     bspwm.enable = true;
+  };
+
+  wayland.windowManager = {
+    hyprland.enable = true;
   };
 
   home.sessionVariables = {
