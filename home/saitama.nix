@@ -29,7 +29,8 @@
     # necessary
     bat
     brightnessctl
-    nodejs_22
+    bzip2
+    nodejs_18
     ripgrep
 
     nix-prefetch-git

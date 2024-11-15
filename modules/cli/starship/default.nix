@@ -9,7 +9,7 @@
       cmd_duration.disabled = true;
 
       directory = {
-        truncation_length = 1;
+        truncation_length = 3;
       };
 
       aws.disabled = true;
