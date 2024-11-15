@@ -10,6 +10,7 @@
 
     ../modules/cli
     ../modules/terminals
+    ../modules/themes
 
     ../modules/window-managers/picom
   ];
