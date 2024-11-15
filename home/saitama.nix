@@ -45,16 +45,10 @@
     rethinkdb
   ];
 
-  services = {
-    # picom.enable = true;
-  };
+  services = { };
 
   xsession.windowManager = {
     bspwm.enable = true;
-  };
-
-  wayland.windowManager = {
-    hyprland.enable = true;
   };
 
   home.sessionVariables = {
