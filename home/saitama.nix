@@ -33,6 +33,7 @@
     bzip2
     nodejs_18
     ripgrep
+    polybar
 
     nix-prefetch-git
 
@@ -48,7 +49,7 @@
   services = { };
 
   xsession.windowManager = {
-    bspwm.enable = true;
+    bspwm.enable = false;
   };
 
   home.sessionVariables = {
