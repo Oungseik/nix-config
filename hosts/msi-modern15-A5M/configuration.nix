@@ -63,7 +63,7 @@ in
     proxy.noProxy = lib.strings.concatStringsSep "," [
       "127.0.0.1"
       "192.168.99.192"
-      "192.168.0.{0..255}"
+      "192.168.0.1/24"
       "103.186.240.90"
       "localhost"
       "internal.domain"
