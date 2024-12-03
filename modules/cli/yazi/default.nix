@@ -9,8 +9,8 @@ let
   starship = pkgs.fetchFromGitHub {
     owner = "Rolv-Apneseth";
     repo = "starship.yazi";
-    rev = "0a141f6dd80a4f9f53af8d52a5802c69f5b4b618";
-    sha256 = "sha256-OL4kSDa1BuPPg9N8QuMtl+MV/S24qk5R1PbO0jgq2rA=";
+    rev = "247f49da1c408235202848c0897289ed51b69343";
+    sha256 = "sha256-0J6hxcdDX9b63adVlNVWysRR5htwAtP5WhIJ2AK2+Gs=";
   };
 in
 {
@@ -40,6 +40,8 @@ in
       	-- Available values: ui.Border.PLAIN, ui.Border.ROUNDED
       	type = ui.Border.ROUNDED,
       }
+
+      require("starship"):setup()
     '';
   };
 }
