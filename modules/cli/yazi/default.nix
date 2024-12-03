@@ -13,6 +13,12 @@ let
     sha256 = "sha256-0J6hxcdDX9b63adVlNVWysRR5htwAtP5WhIJ2AK2+Gs=";
   };
 in
+# yamb = pkgs.fetchFromGitHub {
+#   owner = "h-hg";
+#   repo = "yamb.yazi";
+#   rev = "0598b8defc21ac7231e584115c3aa330f0310db4";
+#   hash = "sha256-Mw+CUyy8sN76NJNy+Xt0HwH6tD/gxqNvyIYKqpWUKMs=";
+# };
 {
 
   programs.yazi = {
@@ -29,9 +35,14 @@ in
     };
 
     theme = import ./themes/catppuccin.nix;
+    keymap = {
+      input.keymap = [ ];
+      manager.keymap = [ ];
+    };
 
     plugins = {
       inherit starship;
+      # inherit yamb;
       full-border = "${plugins-repo}/full-border.yazi";
     };
 
