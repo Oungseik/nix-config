@@ -23,17 +23,13 @@
 
   programs = {
     fastfetch.enable = true;
-    neovide.enable = true;
+    neovide.enable = false;
     wofi.enable = true;
   };
 
   home.packages = with pkgs; [
-    (nerdfonts.override {
-      fonts = [
-        "JetBrainsMono"
-        "ZedMono"
-      ];
-    })
+    nerd-fonts.jetbrains-mono
+    nerd-fonts.zed-mono
     inputs.nixvim.packages.${system}.default
 
     age
@@ -56,7 +52,6 @@
     hyprlock
     hyprpaper
     jq
-    # lunarvim
     mongodb-compass
     nekoray
     nix-prefetch-git
