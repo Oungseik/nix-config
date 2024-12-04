@@ -35,10 +35,6 @@ in
     };
 
     theme = import ./themes/catppuccin.nix;
-    keymap = {
-      input.keymap = [ ];
-      manager.keymap = [ ];
-    };
 
     plugins = {
       inherit starship;

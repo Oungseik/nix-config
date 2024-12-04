@@ -45,6 +45,7 @@
     ghc
     go
     google-chrome
+    brave
     gnumake
     grim
     haskellPackages.haskell-language-server
@@ -69,6 +70,7 @@
     tmux
     tun2socks
     unzip
+    vlc
     vscode
     waybar
     wl-clipboard
