@@ -5,7 +5,7 @@
     autocd = true;
     dotDir = ".config/zsh";
     enableCompletion = true;
-    syntaxHighlighting.enable = true;
+    syntaxHighlighting.enable = false;
 
     shellAliases = {
       ls = "eza";

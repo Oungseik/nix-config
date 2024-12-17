@@ -23,6 +23,10 @@
 
       bind -n C-H previous-window
       bind -n C-L next-window
+
+      # catppuccin configs
+      set -g @catppuccin_window_default_text "#W"
+      set -g @catppuccin_window_current_text "#W"
     '';
   };
 }
