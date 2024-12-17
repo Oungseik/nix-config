@@ -10,13 +10,12 @@
     shellAliases = {
       ls = "eza";
       la = "eza -la";
-      vi = "nvim";
       nix = "nix --experimental-features 'nix-command flakes'";
       home-manager = "home-manager --experimental-features 'nix-command flakes'";
     };
 
     history = {
-      size = 10000;
+      size = 20000;
       path = "$HOME/.zsh/zsh_history";
     };
 

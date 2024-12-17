@@ -26,6 +26,7 @@
     neovide.enable = false;
     wofi.enable = true;
     tmux.enable = true;
+    zsh.enable = true;
   };
 
   home.packages = with pkgs; [
@@ -68,7 +69,6 @@
     slurp
     ssh-to-age
     stack
-    tmux
     tun2socks
     unzip
     vlc
