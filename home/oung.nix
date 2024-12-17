@@ -25,6 +25,7 @@
     fastfetch.enable = true;
     neovide.enable = false;
     wofi.enable = true;
+    tmux.enable = true;
   };
 
   home.packages = with pkgs; [
