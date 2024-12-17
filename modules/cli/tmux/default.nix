@@ -21,8 +21,9 @@
       bind -T copy-mode-vi v send -X begin-selection
       bind -T copy-mode-vi y send-keys -X copy-pipe-and-cancel
 
-      bind -n C-H previous-window
-      bind -n C-L next-window
+      # bind -n C-H previous-window
+      # bind -n C-L next-window
+      bind-key -n M-Space resize-pane -Z
 
       # catppuccin configs
       set -g @catppuccin_window_default_text "#W"
