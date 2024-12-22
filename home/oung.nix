@@ -58,7 +58,7 @@
     mongodb-compass
     nekoray
     nix-prefetch-git
-    nodejs_20
+    nodejs_22
     openssl
     pavucontrol
     pcsx2

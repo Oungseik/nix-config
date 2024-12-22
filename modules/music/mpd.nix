@@ -31,7 +31,7 @@ in
          type	"fifo"
          name	"Visualizer feed"
          path	"/tmp/mpd.fifo"
-         format	"44100:16:2"
+         format	"44100:16:1"
       }
 
     '';

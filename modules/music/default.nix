@@ -3,9 +3,6 @@
   imports = [
     ./mpd-mpris.nix
     ./mpd.nix
+    ./ncmpcpp.nix
   ];
-
-  services.mpd.enable = true;
-  services.mpd-mpris.enable = true;
-
 }

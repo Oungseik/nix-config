@@ -6,6 +6,7 @@
 
     keyMode = "vi";
     mouse = true;
+    shell = "${pkgs.zsh}/bin/zsh";
 
     plugins = with pkgs; [
       tmuxPlugins.sensible
@@ -26,8 +27,9 @@
       bind-key -n M-Space resize-pane -Z
 
       # catppuccin configs
-      set -g @catppuccin_window_default_text "#W"
-      set -g @catppuccin_window_current_text "#W"
+      set -g @catppuccin_window_default_text '#W'
+      set -g @catppuccin_window_current_text '#W'
+      set -g @catppuccin_status_background 'none'
     '';
   };
 }
