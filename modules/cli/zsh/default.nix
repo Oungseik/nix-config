@@ -34,10 +34,8 @@
 
     initExtra = ''
       bindkey -e
-      bindkey "^p" history-search-backward
-      bindkey "^n" history-search-forward
-      bindkey "^[[1;5A" history-search-backward
-      bindkey "^[[1;5B" history-search-forward
+      bindkey '^P' history-beginning-search-backward
+      bindkey '^N' history-beginning-search-forward
       bindkey "^[[1;5C" forward-word
       bindkey "^[[1;5D" backward-word
 
@@ -54,11 +52,6 @@
 
       source ~/.zshrc
     '';
-  };
-
-  programs.fzf = {
-    enable = true;
-    enableZshIntegration = true;
   };
 
   # home.file.".zsh" = {

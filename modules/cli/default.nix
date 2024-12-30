@@ -3,6 +3,7 @@
   imports = [
     ./btop
     ./eza
+    ./fzf
     ./git
     ./helix
     ./starship
