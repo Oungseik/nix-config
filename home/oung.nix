@@ -26,6 +26,7 @@
     neovide.enable = false;
     wofi.enable = true;
     tmux.enable = true;
+    zoxide.enable = true;
     zsh.enable = true;
   };
 
@@ -47,7 +48,6 @@
     ghc
     go
     google-chrome
-    brave
     gnumake
     grim
     haskellPackages.haskell-language-server
