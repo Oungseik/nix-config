@@ -33,7 +33,6 @@
   home.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
     nerd-fonts.zed-mono
-    inputs.nixvim.packages.${system}.default
 
     age
     bat
@@ -57,6 +56,7 @@
     jq
     mongodb-compass
     nekoray
+    neovim
     nix-prefetch-git
     nodejs_22
     openssl
