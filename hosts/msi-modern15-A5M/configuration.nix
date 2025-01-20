@@ -62,8 +62,7 @@ in
     proxy.default = "127.0.0.1:2081";
     proxy.noProxy = lib.strings.concatStringsSep "," [
       "127.0.0.1"
-      "192.168.99.192"
-      "192.168.0.1/24"
+      "192.168.0.0/16"
       "103.186.240.90"
       "localhost"
       "internal.domain"
@@ -102,6 +101,8 @@ in
         layout = "us";
         variant = "";
       };
+
+      desktopManager.gnome.enable = true;
     };
 
     displayManager.sddm = {
@@ -161,6 +162,7 @@ in
     curl
     clang
     gcc
+    obs-studio
     rustup
     git
     home-manager
@@ -209,11 +211,11 @@ in
   # networking.firewall.enable = false;
 
   nix = {
-    # gc = {
-    #   automatic = true;
-    #   dates = "weekly";
-    #   options = "--delete-older-than 1w";
-    # };
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 1w";
+    };
     settings.auto-optimise-store = true;
     settings.experimental-features = [
       "nix-command"
