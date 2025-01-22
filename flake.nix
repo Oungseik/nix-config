@@ -10,7 +10,7 @@
 
     nixvim.url = "github:Oungseik/nixvim-experimental";
     nix-colors.url = "github:misterio77/nix-colors";
-    # helix.url = "github:helix-editor/helix/master";
+    # helix.url = "github:helix-editor/helix/25.01.1";
   };
 
   outputs =
@@ -29,10 +29,10 @@
           };
           modules = [
             ./hosts/msi-modern15-A5M/configuration.nix
-            # you can use this instead of `specialArgs`. Check out https://nixos-and-flakes.thiscute.world/nixos-with-flakes/nixos-flake-and-module-system#pass-non-default-parameters-to-submodules 
+            # you can use this instead of `specialArgs`. Check out https://nixos-and-flakes.thiscute.world/nixos-with-flakes/nixos-flake-and-module-system#pass-non-default-parameters-to-submodules
             # { _module.args = { inherit inputs; }; }
 
-            # # if you want to enable home manager as nixos module, enable this. but you need to disable the home configuration 
+            # # if you want to enable home manager as nixos module, enable this. but you need to disable the home configuration
             # # otherwise you will get recursion error
             # home-manager.nixosModules.home-manager {
             #   home-manager.useGlobalPkgs = true;
