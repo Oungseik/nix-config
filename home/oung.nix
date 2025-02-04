@@ -69,6 +69,7 @@
     slurp
     ssh-to-age
     stack
+    television
     tun2socks
     unzip
     vlc
