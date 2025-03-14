@@ -69,10 +69,10 @@
     slurp
     ssh-to-age
     stack
-    television
     tun2socks
     unzip
     vlc
+    code-cursor
     vscode
     waybar
     wl-clipboard
