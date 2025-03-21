@@ -1,6 +1,6 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, ... }:
+{
   programs.helix = {
-    package = inputs.helix.packages.${pkgs.system}.helix;
 
     extraPackages = with pkgs; [
       marksman
@@ -26,13 +26,16 @@
       theme = "catppuccin-macchiato";
 
       editor = {
-        lsp.display-message = true;
+        lsp.display-messages = true;
       };
 
       keys.normal = {
         space.w = ":w";
         space.q = ":q";
-        esc = [ "collapse_selection" "keep_primary_selection" ];
+        esc = [
+          "collapse_selection"
+          "keep_primary_selection"
+        ];
       };
     };
   };

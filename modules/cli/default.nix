@@ -16,7 +16,7 @@
     btop.enable = true;
     eza.enable = true;
     git.enable = true;
-    # helix.enable = false;
+    helix.enable = true;
     starship.enable = true;
     # tmux.enable = false;
     yazi.enable = true;
