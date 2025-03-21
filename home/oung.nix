@@ -25,7 +25,6 @@
     fastfetch.enable = true;
     neovide.enable = false;
     wofi.enable = true;
-    tmux.enable = true;
     zoxide.enable = true;
     zsh.enable = true;
   };
@@ -53,6 +52,7 @@
     hurl
     hyprlock
     hyprpaper
+    hyprpolkitagent
     jq
     mongodb-compass
     nekoray
@@ -69,6 +69,7 @@
     slurp
     ssh-to-age
     stack
+    tmux
     tun2socks
     unzip
     vlc
