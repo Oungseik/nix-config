@@ -43,6 +43,7 @@
     fd
     firefox
     gammastep
+    gdb
     ghc
     go
     google-chrome
@@ -73,8 +74,11 @@
     tun2socks
     unzip
     vlc
-    code-cursor
-    vscode
+
+    slack
+
+    # vscode
+    vscode-fhs
     waybar
     wl-clipboard
     zig
