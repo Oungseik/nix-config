@@ -44,12 +44,10 @@
     firefox
     gammastep
     gdb
-    ghc
     go
     google-chrome
     gnumake
     grim
-    haskellPackages.haskell-language-server
     hurl
     hyprlock
     hyprpaper
@@ -65,14 +63,13 @@
     pcsx2
     pkg-config
     playerctl
-    proxychains
     ripgrep
     slurp
     ssh-to-age
-    stack
     tmux
     tun2socks
     unzip
+    tlaplusToolbox
     vlc
 
     slack
@@ -81,8 +78,6 @@
     vscode-fhs
     waybar
     wl-clipboard
-    zig
-    zls
     zip
   ];
 
