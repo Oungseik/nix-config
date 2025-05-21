@@ -59,7 +59,7 @@ in
     # wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
     # Configure network proxy if necessary
-    proxy.default = "http://127.0.0.1:2081/";
+    proxy.default = "http://127.0.0.1:2080/";
     proxy.noProxy = lib.strings.concatStringsSep "," [
       "127.0.0.1"
       "192.168.0.0/16"

@@ -56,6 +56,7 @@
     mongodb-compass
     nekoray
     neovim
+    neovide
     nix-prefetch-git
     nodejs_22
     openssl
