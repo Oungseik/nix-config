@@ -165,7 +165,6 @@ in
     clang
     gcc
     obs-studio
-    rustup
     git
     home-manager
     wget

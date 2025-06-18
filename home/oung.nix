@@ -34,52 +34,60 @@
     nerd-fonts.zed-mono
 
     age
-    bat
     brightnessctl
-    deja-dup
-    evince
     eww
     exercism
     fd
-    firefox
     gammastep
-    gdb
-    go
-    google-chrome
     gnumake
-    grim
-    hurl
-    hyprlock
-    hyprpaper
-    hyprpolkitagent
-    jq
-    mongodb-compass
-    nekoray
-    neovim
-    neovide
     nix-prefetch-git
-    nodejs_22
-    openssl
     pavucontrol
     pcsx2
-    pkg-config
     playerctl
-    ripgrep
-    slurp
     ssh-to-age
-    tmux
     tun2socks
-    unzip
     tlaplusToolbox
     vlc
 
-    slack
-
-    # vscode
-    vscode-fhs
     waybar
+    slurp
+    jq
+    hyprlock
+    hyprpaper
+    hyprpolkitagent
     wl-clipboard
+    grim
+    deja-dup
+    evince
+    tmux
+
+    firefox
+    google-chrome
+
+    unzip
     zip
+
+    vscode-fhs
+    slack
+    nekoray
+
+    neovim
+    neovide
+    ripgrep
+    hurl
+    lua-language-server
+    stylua
+    typescript
+    typescript-language-server
+    nodejs_22
+
+    gdb
+    rustup
+    openssl
+    pkg-config
+
+    sqlite
+    go
   ];
 
   home.sessionVariables = {
