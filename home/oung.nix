@@ -79,7 +79,11 @@
     stylua
     typescript
     typescript-language-server
+    vscode-langservers-extracted
     nodejs_22
+    nil
+    nixfmt-rfc-style
+    gopls
 
     gdb
     rustup
