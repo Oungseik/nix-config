@@ -10,6 +10,7 @@
 
     nixvim.url = "github:Oungseik/nixvim-experimental";
     nix-colors.url = "github:misterio77/nix-colors";
+    jetbrainsmono-condensed.url = "github:Oungseik/JetBrainsMono-Condensed";
     # helix.url = "github:helix-editor/helix/25.01.1";
   };
 

@@ -30,6 +30,7 @@
   };
 
   home.packages = with pkgs; [
+    inputs.jetbrainsmono-condensed.packages."x86_64-linux".default
     nerd-fonts.jetbrains-mono
     nerd-fonts.zed-mono
 
@@ -81,6 +82,7 @@
     typescript-language-server
     vscode-langservers-extracted
     nodejs_22
+    bun
     nil
     nixfmt-rfc-style
     gopls
