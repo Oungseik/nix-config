@@ -26,7 +26,7 @@
       repaint_delay = 20;
       input_delay = 3;
       sync_to_monitor = "yes";
-      disable_ligatures = "always";
+      disable_ligatures = "never";
     };
   };
 }
