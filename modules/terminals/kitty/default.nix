@@ -2,7 +2,7 @@
 {
   programs.kitty = {
     font.name = "ZedMono Nerd Font";
-    font.size = 14;
+    font.size = 13.5;
 
     themeFile = "Catppuccin-Macchiato";
 
@@ -26,7 +26,7 @@
       repaint_delay = 20;
       input_delay = 3;
       sync_to_monitor = "yes";
-      disable_ligatures = "never";
+      disable_ligatures = "always";
     };
   };
 }
