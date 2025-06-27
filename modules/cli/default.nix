@@ -1,6 +1,7 @@
 { ... }:
 {
   imports = [
+    ./atuin
     ./btop
     ./eza
     ./fzf
@@ -13,6 +14,7 @@
   ];
 
   programs = {
+    atuin.enable = true;
     btop.enable = true;
     eza.enable = true;
     git.enable = true;
