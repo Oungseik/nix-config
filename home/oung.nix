@@ -79,12 +79,14 @@
     stylua
     typescript
     typescript-language-server
+    svelte-language-server
     vscode-langservers-extracted
-    nodejs_22
+    nodejs_24
     bun
     nil
     nixfmt-rfc-style
     gopls
+    tombi
 
     gdb
     rustup
