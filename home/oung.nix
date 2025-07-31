@@ -70,6 +70,7 @@
     vscode-fhs
     slack
     nekoray
+    sshuttle
 
     neovim
     neovide
