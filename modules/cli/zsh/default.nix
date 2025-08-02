@@ -3,7 +3,6 @@
   home.packages = with pkgs; [ eza ];
   programs.zsh = {
     autocd = true;
-    dotDir = ".config/zsh";
     enableCompletion = true;
     syntaxHighlighting.enable = false;
 
@@ -50,7 +49,14 @@
       zstyle ":completion:*" list-colors "\$\{(s.:.)LS_COLORS}" 
       zstyle ":completion:*" menu no
 
-      source ~/.zshrc
+      alias vi="nvim"
+      alias v="nvim"
+
+      export EDITOR=nvim
+      export PATH=~/.npm-global/bin:~/.local/bin:$PATH
+      export PATH=$HOME/.cargo/bin:$PATH
+      export NIXPKGS_ALLOW_UNFREE=1
+      export AIRMUX_CONFIG=$HOME/.config/airmux
     '';
   };
 
