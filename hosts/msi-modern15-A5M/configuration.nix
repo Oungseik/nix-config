@@ -189,6 +189,7 @@ in
     gamemode.enable = true;
 
     hyprland.enable = true;
+    niri.enable = true;
     gdk-pixbuf.modulePackages = [ pkgs.librsvg ];
     zsh.enable = true;
   };

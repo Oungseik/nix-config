@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, ... }:
+{  pkgs, ... }:
 let
   sddmTheme = import ../../pkgs/sddm-theme { inherit pkgs; };
 in
@@ -51,7 +51,6 @@ in
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [ git curl wget neovim home-manager ];
   };
-
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

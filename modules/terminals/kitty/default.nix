@@ -19,14 +19,15 @@
       cursor_blink_interval = 0;
 
       enable_audio_bell = false;
-      background_opacity = "0.95";
+      background_opacity = "0.9";
 
       editor = "nvim";
 
+      cursor_trail = 1;
       repaint_delay = 20;
       input_delay = 3;
       sync_to_monitor = "yes";
-      disable_ligatures = "always";
+      # disable_ligatures = "always";
     };
   };
 }

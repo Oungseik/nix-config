@@ -41,6 +41,7 @@
     gammastep
     gnumake
     nix-prefetch-git
+    nix-inspect
     pavucontrol
     pcsx2
     playerctl
@@ -50,6 +51,7 @@
     vlc
 
     waybar
+    rofi-wayland
     slurp
     jq
     hyprlock
