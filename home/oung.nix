@@ -71,6 +71,8 @@
 
     vscode-fhs
     slack
+    signal-desktop
+    telegram-desktop
     nekoray
     sshuttle
 

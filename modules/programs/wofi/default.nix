@@ -5,7 +5,7 @@
       hide_scroll = true;
       show = "drun";
       width = "30%";
-      lines = 8;
+      height = "30%";
       line_wrap = "word";
       term = "alacritty";
       allow_markup = true;
