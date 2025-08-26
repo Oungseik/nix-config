@@ -57,6 +57,9 @@
       export PATH=$HOME/.cargo/bin:$PATH
       export NIXPKGS_ALLOW_UNFREE=1
       export AIRMUX_CONFIG=$HOME/.config/airmux
+
+      autoload -U select-word-style
+      select-word-style bash
     '';
   };
 
