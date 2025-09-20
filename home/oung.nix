@@ -51,7 +51,7 @@
     vlc
 
     waybar
-    rofi-wayland
+    rofi
     slurp
     jq
     hyprlock
