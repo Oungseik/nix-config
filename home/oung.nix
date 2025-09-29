@@ -103,6 +103,8 @@
     sqlite
     go
     gleam
+    ngrok
+    google-cloud-sdk
   ];
 
   home.sessionVariables = {
