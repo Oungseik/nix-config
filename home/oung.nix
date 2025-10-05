@@ -38,6 +38,7 @@
     eww
     exercism
     fd
+    pass
     gammastep
     gnumake
     nix-prefetch-git
