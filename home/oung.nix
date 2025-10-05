@@ -71,7 +71,7 @@
     zip
 
     vscode-fhs
-    code-cursor-fhs
+    # code-cursor-fhs
     slack
     signal-desktop
     telegram-desktop
@@ -102,9 +102,12 @@
 
     sqlite
     go
+    delve
     gleam
     ngrok
     google-cloud-sdk
+
+    colmena
   ];
 
   home.sessionVariables = {
