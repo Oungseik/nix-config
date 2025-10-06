@@ -38,7 +38,15 @@
     eww
     exercism
     fd
-    pass
+    gnupg
+    (pass.withExtensions (
+      subpkgs: with subpkgs; [
+        pass-audit
+        pass-otp
+        pass-genphrase
+      ]
+    ))
+    pinentry-curses
     gammastep
     gnumake
     nix-prefetch-git
@@ -95,6 +103,7 @@
     nixfmt-rfc-style
     gopls
     tombi
+    markdown-oxide
 
     gdb
     rustup

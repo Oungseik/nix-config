@@ -9,8 +9,8 @@
     shellAliases = {
       ls = "eza";
       la = "eza -la";
-      nix = "nix --experimental-features 'nix-command flakes'";
-      home-manager = "home-manager --experimental-features 'nix-command flakes'";
+      nix = "nix --experimental-features 'nix-command flakes pipe-operators'";
+      home-manager = "home-manager --experimental-features 'nix-command flakes pipe-operators'";
     };
 
     history = {

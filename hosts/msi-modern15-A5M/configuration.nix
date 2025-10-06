@@ -219,6 +219,7 @@ in
     };
     settings.auto-optimise-store = true;
     settings.experimental-features = [
+      "pipe-operators"
       "nix-command"
       "flakes"
     ];
