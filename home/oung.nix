@@ -81,6 +81,7 @@
 
     vscode-fhs
     # code-cursor-fhs
+    opencode
     slack
     signal-desktop
     telegram-desktop
