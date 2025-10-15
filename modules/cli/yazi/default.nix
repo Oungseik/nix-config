@@ -3,8 +3,8 @@ let
   plugins-repo = pkgs.fetchFromGitHub {
     owner = "yazi-rs";
     repo = "plugins";
-    rev = "d1c8baab86100afb708694d22b13901b9f9baf00";
-    hash = "sha256-52Zn6OSSsuNNAeqqZidjOvfCSB7qPqUeizYq/gO+UbE=";
+    rev = "9a52857eac61ede58d11c06ca813c3fa63fe3609";
+    hash = "sha256-YM53SsE10wtMqI1JGa4CqZbAgr7h62MZ5skEdAavOVA=";
   };
   starship = pkgs.fetchFromGitHub {
     owner = "Rolv-Apneseth";
@@ -25,7 +25,7 @@ in
     enableZshIntegration = true;
 
     settings = {
-      manager = {
+      mgr = {
         show_hidden = false;
       };
       # preview = {

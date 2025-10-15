@@ -80,11 +80,8 @@
     zip
 
     vscode-fhs
-    # code-cursor-fhs
-    opencode
+    code-cursor-fhs
     slack
-    signal-desktop
-    telegram-desktop
     nekoray
     sshuttle
 
@@ -105,6 +102,7 @@
     gopls
     tombi
     markdown-oxide
+    vale
 
     gdb
     rustup
@@ -113,6 +111,8 @@
 
     sqlite
     go
+    golangci-lint
+    go-tools
     delve
     gleam
     ngrok
