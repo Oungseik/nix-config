@@ -1,5 +1,5 @@
 builtins.fromTOML ''
-  [manager]
+  [mgr]
   cwd = { fg = "#8bd5ca" }
 
   # Hovered

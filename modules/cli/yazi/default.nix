@@ -43,7 +43,7 @@ in
     };
 
     keymap = {
-      manager.prepend_keymap = import ./keymaps/yamb.nix;
+      mgr.prepend_keymap = import ./keymaps/yamb.nix;
     };
 
     initLua = ''
