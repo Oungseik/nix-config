@@ -57,6 +57,10 @@ in
   networking = {
     hostName = "nixos"; # Define your hostname.
     networkmanager.enable = true; # Enable networking
+    nameservers = [
+      "8.8.8.8"
+      "8.8.4.4"
+    ];
     # wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
     # Configure network proxy if necessary

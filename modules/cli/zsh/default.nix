@@ -51,6 +51,7 @@
 
       alias vi="nvim"
       alias v="nvim"
+      alias note="cd $HOME/Notes && nvim"
 
       export EDITOR=nvim
       export PATH=~/.npm-global/bin:~/.local/bin:$PATH

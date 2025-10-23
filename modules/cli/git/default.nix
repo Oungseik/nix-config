@@ -1,9 +1,7 @@
-{ config, ... }: {
+{ config, ... }:
+{
   programs.git = {
-    userName = "Min Aung Thu Win";
-    userEmail = "mhemaungthuwin@gmail.com";
-
-    extraConfig = {
+    settings = {
       init = {
         defaultBranch = "main";
       };
@@ -15,6 +13,9 @@
       log = {
         date = "short";
       };
+
+      user.name = "Min Aung Thu Win";
+      user.email = "mhemaungthuwin@gmail.com";
     };
   };
 }
