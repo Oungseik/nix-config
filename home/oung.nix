@@ -30,6 +30,7 @@
   };
 
   home.packages = with pkgs; [
+    (import ../pkgs/proxy-tunnel/default.nix { inherit pkgs; })
     nerd-fonts.jetbrains-mono
     nerd-fonts.zed-mono
 
