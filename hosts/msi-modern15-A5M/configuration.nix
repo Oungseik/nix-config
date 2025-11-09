@@ -3,9 +3,6 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { pkgs, lib, ... }:
-let
-  sddmTheme = import ../../pkgs/sddm-theme { inherit pkgs; };
-in
 {
   imports = [
     # Include the results of the hardware scan.
@@ -113,7 +110,8 @@ in
 
     displayManager.sddm = {
       enable = true;
-      theme = "${sddmTheme}";
+      enableHidpi = true;
+      theme = "catppuccin-mocha-mauve"; # Theme name corresponds to the overridden package's theme name
     };
 
     # Enable CUPS to print documents.
@@ -165,6 +163,11 @@ in
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    (pkgs.catppuccin-sddm.override {
+      flavor = "mocha";
+      accent = "mauve";
+    })
+
     openvpn
     curl
     clang
