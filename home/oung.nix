@@ -30,7 +30,9 @@
   };
 
   home.packages = with pkgs; [
+    inputs.opencode.packages.${pkgs.system}.default
     (import ../pkgs/proxy-tunnel/default.nix { inherit pkgs; })
+
     nerd-fonts.jetbrains-mono
     nerd-fonts.zed-mono
 

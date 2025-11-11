@@ -61,6 +61,10 @@
 
       autoload -U select-word-style
       select-word-style bash
+
+      if [[ -f "$HOME/.env" ]]; then
+        export $(cat "$HOME/.env" | xargs)
+      fi
     '';
   };
 
