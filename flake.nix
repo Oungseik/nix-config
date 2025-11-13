@@ -24,7 +24,7 @@
     {
       nixosConfigurations = {
         "msi-modern15-A5M" = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
+          # system = "x86_64-linux";
           specialArgs = {
             inherit inputs;
           };
