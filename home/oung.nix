@@ -102,7 +102,6 @@
     bun
     nil
     nixfmt-rfc-style
-    gopls
     tombi
     markdown-oxide
     vale
@@ -116,6 +115,8 @@
     go
     golangci-lint
     go-tools
+    gotestsum
+    gopls
     delve
     gleam
     ngrok
