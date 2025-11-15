@@ -106,7 +106,7 @@
 
     };
 
-    desktopManager.gnome.enable = true;
+    # desktopManager.gnome.enable = true;
 
     displayManager.sddm = {
       enable = true;

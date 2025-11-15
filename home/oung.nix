@@ -79,6 +79,8 @@
     google-chrome
     brave
 
+    lazygit
+    gitkraken
     unzip
     zip
 
@@ -104,6 +106,7 @@
     nixfmt-rfc-style
     tombi
     markdown-oxide
+    tree-sitter
     vale
 
     gdb
