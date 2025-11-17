@@ -108,29 +108,35 @@
     markdown-oxide
     tree-sitter
     vale
+    biome
+    sqlite
 
+    # rust dev tools
     gdb
     rustup
     openssl
     pkg-config
 
-    sqlite
+    # go lang dev tools
     go
     golangci-lint
     go-tools
     gotestsum
     gopls
     delve
+
     gleam
     ngrok
     google-cloud-sdk
 
+    # cloud deployment with nix
     colmena
   ];
 
   home.sessionVariables = {
     EDITOR = "nvim";
     RUSTUP_TOOLCHAIN = "stable";
+    LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
   };
 
   home.stateVersion = "24.11";
