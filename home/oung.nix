@@ -110,6 +110,7 @@
     vale
     biome
     sqlite
+    yaml-language-server
 
     # rust dev tools
     gdb
