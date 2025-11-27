@@ -1,4 +1,9 @@
-{ pkgs, inputs, ... }:
+{
+  pkgs,
+  pkgs-stable,
+  inputs,
+  ...
+}:
 {
   home = {
     username = "oung";
@@ -108,7 +113,6 @@
     markdown-oxide
     tree-sitter
     vale
-    biome
     sqlite
     yaml-language-server
 
@@ -119,7 +123,7 @@
     pkg-config
 
     # go lang dev tools
-    go
+    pkgs-stable.go
     golangci-lint
     go-tools
     gotestsum
