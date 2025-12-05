@@ -136,6 +136,8 @@
     ngrok
     google-cloud-sdk
 
+    qemu
+
     # cloud deployment with nix
     colmena
   ];
