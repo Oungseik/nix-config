@@ -44,3 +44,8 @@ toggable module
 nix run .#nixosConfigurations.otlp-server.config.system.build.vm
 ```
 
+
+```bash
+nix run .#nixosConfigurations.otlp-server.config.system.build.vm -- --nographic
+```
+
