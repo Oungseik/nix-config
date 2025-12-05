@@ -92,7 +92,7 @@
     vscode-fhs
     code-cursor-fhs
     slack
-    nekoray
+    throne
     sshuttle
 
     neovim
