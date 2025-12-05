@@ -37,3 +37,10 @@ toggable module
 }
 
 ```
+
+## Run Nix OS inside QEMU virtual machine
+
+```bash
+nix run .#nixosConfigurations.otlp-server.config.system.build.vm
+```
+

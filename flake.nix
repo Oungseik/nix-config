@@ -45,12 +45,12 @@
           ];
         };
 
-        "asus-series-A56C" = nixpkgs.lib.nixosSystem {
+        "otlp-server" = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           specialArgs = {
             inherit inputs;
           };
-          modules = [ ./hosts/asus-series-A56C/configuration.nix ];
+          modules = [ ./hosts/otlp-server/configuration.nix ];
         };
 
       };
