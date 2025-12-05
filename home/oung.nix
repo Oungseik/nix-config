@@ -114,6 +114,8 @@
     tree-sitter
     vale
     sqlite
+    postgresql
+    sleek
     yaml-language-server
 
     # rust dev tools
