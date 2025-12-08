@@ -1,6 +1,5 @@
 {
   pkgs,
-  pkgs-stable,
   inputs,
   ...
 }:
@@ -125,7 +124,7 @@
     pkg-config
 
     # go lang dev tools
-    pkgs-stable.go
+    go
     golangci-lint
     go-tools
     gotestsum

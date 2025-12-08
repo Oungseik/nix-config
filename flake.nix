@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.05";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -20,7 +19,6 @@
       self,
       nixpkgs,
       home-manager,
-      nixpkgs-stable,
       ...
     }@inputs:
     {
@@ -60,10 +58,6 @@
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = {
             inherit inputs;
-            pkgs-stable = import nixpkgs-stable {
-              system = "x86_64-linux";
-              config.allowUnfree = true;
-            };
           };
           modules = [ ./home/oung.nix ];
         };
