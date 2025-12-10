@@ -21,6 +21,7 @@
 
     ../modules/programs/wofi
     ../modules/programs/zathura
+    ../modules/window-managers/niri
   ];
 
   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-macchiato;
