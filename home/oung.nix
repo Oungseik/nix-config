@@ -71,6 +71,7 @@
     rofi
     slurp
     jq
+    lsof
     hyprlock
     hyprpaper
     hyprpolkitagent
@@ -79,6 +80,7 @@
     deja-dup
     evince
     tmux
+    zellij
 
     firefox
     google-chrome
