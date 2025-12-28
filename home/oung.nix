@@ -35,7 +35,6 @@
   };
 
   home.packages = with pkgs; [
-    inputs.opencode.packages.${pkgs.stdenv.hostPlatform.system}.default
     (import ../pkgs/proxy-tunnel/default.nix { inherit pkgs; })
 
     nerd-fonts.jetbrains-mono
@@ -142,6 +141,21 @@
 
     # cloud deployment with nix
     colmena
+
+    apacheHttpd
+    mariadb
+    php83
+    php83Packages.composer
+    php83Packages.php-cs-fixer
+    php83Extensions.mysqli
+    php83Extensions.curl
+    php83Extensions.gd
+    php83Extensions.mbstring
+    php83Extensions.xml
+    php83Extensions.zip
+    php83Extensions.intl
+    php83Extensions.xdebug
+    intelephense
   ];
 
   home.sessionVariables = {
