@@ -144,18 +144,24 @@
 
     apacheHttpd
     mariadb
-    php83
     php83Packages.composer
     php83Packages.php-cs-fixer
-    php83Extensions.mysqli
-    php83Extensions.curl
-    php83Extensions.gd
-    php83Extensions.mbstring
-    php83Extensions.xml
-    php83Extensions.zip
-    php83Extensions.intl
-    php83Extensions.xdebug
     intelephense
+
+    (php83.withExtensions (
+      { enabled, all }:
+      enabled
+      ++ [
+        all.mysqli
+        all.curl
+        all.gd
+        all.mbstring
+        all.xml
+        all.zip
+        all.intl
+        all.xdebug
+      ]
+    ))
   ];
 
   home.sessionVariables = {
