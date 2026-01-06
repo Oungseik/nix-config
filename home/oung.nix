@@ -79,14 +79,13 @@
     deja-dup
     evince
     tmux
-    zellij
 
     firefox
     google-chrome
     brave
 
     lazygit
-    gitkraken
+    # gitkraken
     unzip
     zip
 
@@ -134,7 +133,7 @@
     delve
 
     gleam
-    ngrok
+    # ngrok
     google-cloud-sdk
 
     qemu

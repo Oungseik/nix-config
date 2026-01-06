@@ -10,6 +10,7 @@
     ./starship
     ./tmux
     ./yazi
+    ./zellij
     ./zsh
   ];
 
@@ -22,5 +23,6 @@
     starship.enable = true;
     # tmux.enable = false;
     yazi.enable = true;
+    zellij.enable = true;
   };
 }
