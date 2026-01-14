@@ -34,8 +34,6 @@ in
       # };
     };
 
-    theme = import ./themes/catppuccin.nix;
-
     plugins = {
       inherit starship;
       inherit yamb;
