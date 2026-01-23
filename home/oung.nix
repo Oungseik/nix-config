@@ -108,7 +108,7 @@
     nodejs_24
     bun
     nil
-    nixfmt-rfc-style
+    nixfmt
     tombi
     markdown-oxide
     tree-sitter
