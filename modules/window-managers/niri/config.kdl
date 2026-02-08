@@ -9,6 +9,9 @@ screenshot-path "~/Pictures/Screenshots from %Y-%m-%d %H-%M-%S.png"
 
 
 animations {
+    workspace-switch {
+      off
+    }
 }
 
 input {
