@@ -35,6 +35,7 @@
   };
 
   home.packages = with pkgs; [
+    inputs.opencode.packages.${pkgs.stdenv.hostPlatform.system}.default
     (import ../pkgs/proxy-tunnel/default.nix { inherit pkgs; })
 
     nerd-fonts.jetbrains-mono
@@ -44,6 +45,7 @@
     brightnessctl
     eww
     exercism
+    gh
     fd
     gnupg
     (pass.withExtensions (
