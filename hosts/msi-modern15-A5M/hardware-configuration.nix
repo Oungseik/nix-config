@@ -42,11 +42,7 @@
     fsType = "ext4";
     options = [
       "defaults"
-      "rw"
-      "user"
       "nofail"
-      "uid=1000"
-      "gid=100"
     ];
   };
 
