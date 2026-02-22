@@ -174,7 +174,7 @@
     # })
 
     gdm
-    openvpn
+    # openvpn
     curl
     clang
     gcc
@@ -269,5 +269,5 @@
       "flakes"
     ];
   };
-  system.stateVersion = "25.05";
+  system.stateVersion = "26.05";
 }
