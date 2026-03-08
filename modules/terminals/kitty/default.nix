@@ -2,9 +2,9 @@
 {
   programs.kitty = {
     font.name = "ZedMono Nerd Font";
-    font.size = 13.5;
+    font.size = 14;
 
-    themeFile = "Catppuccin-Macchiato";
+    themeFile = "kanagawa";
 
     keybindings = {
       "ctrl+shift+h" = "no_op";
@@ -29,7 +29,7 @@
       sync_to_monitor = "yes";
       allow_remote_control = "yes";
       listen_on = "unix:@mykitty";
-      # disable_ligatures = "always";
+      disable_ligatures = "always";
     };
   };
 }
