@@ -40,6 +40,12 @@ in
       full-border = "${plugins-repo}/full-border.yazi";
     };
 
+    theme = {
+      flavor = {
+        dark = "kanagawa";
+      };
+    };
+
     keymap = {
       mgr.prepend_keymap = import ./keymaps/yamb.nix;
     };
