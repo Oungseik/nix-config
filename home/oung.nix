@@ -84,7 +84,7 @@
 
     firefox
     google-chrome
-    brave
+    # brave
 
     lazygit
     # gitkraken
