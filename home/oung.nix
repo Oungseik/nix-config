@@ -81,6 +81,7 @@
     deja-dup
     evince
     tmux
+    wpsoffice
 
     firefox
     google-chrome
@@ -92,7 +93,7 @@
     zip
 
     vscode-fhs
-    code-cursor-fhs
+    # code-cursor-fhs
     slack
     throne
     sshuttle
