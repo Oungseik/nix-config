@@ -55,6 +55,9 @@
     hostName = "nixos"; # Define your hostname.
     networkmanager.enable = true; # Enable networking
     networkmanager.dns = "none";
+    hosts = {
+      "127.0.0.1" = [ "sfrclak.com" ];
+    };
     nameservers = [
       "8.8.8.8"
       "8.8.4.4"

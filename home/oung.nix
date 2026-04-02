@@ -32,6 +32,7 @@
     wofi.enable = true;
     zoxide.enable = true;
     zsh.enable = true;
+    television.enable = true;
   };
 
   home.packages = with pkgs; [
@@ -47,6 +48,7 @@
     exercism
     gh
     fd
+    television
     gnupg
     (pass.withExtensions (
       subpkgs: with subpkgs; [
@@ -167,7 +169,8 @@
   ];
 
   home.sessionVariables = {
-    EDITOR = "nvim";
+    EDITOR = "neovide";
+    LAUNCH_EDITOR="neovide";
     RUSTUP_TOOLCHAIN = "stable";
     LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
   };
