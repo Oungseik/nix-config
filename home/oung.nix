@@ -116,7 +116,7 @@
     nixfmt
     tombi
     markdown-oxide
-    tree-sitter
+    (import ../pkgs/tree-sitter/default.nix { inherit pkgs; })
     vale
     sqlite
     postgresql
@@ -170,7 +170,7 @@
 
   home.sessionVariables = {
     EDITOR = "neovide";
-    LAUNCH_EDITOR="neovide";
+    LAUNCH_EDITOR = "neovide";
     RUSTUP_TOOLCHAIN = "stable";
     LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
   };
