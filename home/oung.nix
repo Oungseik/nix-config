@@ -83,7 +83,6 @@
     deja-dup
     evince
     tmux
-    wpsoffice
 
     firefox
     google-chrome
@@ -119,6 +118,9 @@
     (import ../pkgs/tree-sitter/default.nix { inherit pkgs; })
     vale
     sqlite
+
+    (import ../pkgs/turso/default.nix { inherit pkgs; })
+
     postgresql
     sleek
     yaml-language-server
