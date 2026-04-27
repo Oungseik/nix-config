@@ -36,7 +36,6 @@
   };
 
   home.packages = with pkgs; [
-    inputs.opencode.packages.${pkgs.stdenv.hostPlatform.system}.default
     (import ../pkgs/proxy-tunnel/default.nix { inherit pkgs; })
 
     nerd-fonts.jetbrains-mono
@@ -118,8 +117,7 @@
     (import ../pkgs/tree-sitter/default.nix { inherit pkgs; })
     vale
     sqlite
-
-    (import ../pkgs/turso/default.nix { inherit pkgs; })
+    prettier
 
     postgresql
     sleek
