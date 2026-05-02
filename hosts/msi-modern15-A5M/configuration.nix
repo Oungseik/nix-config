@@ -38,10 +38,10 @@
   };
 
   virtualisation = {
-    docker.rootless = {
-      enable = true;
-      setSocketVariable = true;
-    };
+    # docker.rootless = {
+    #   enable = true;
+    #   setSocketVariable = true;
+    # };
     # virtualbox = {
     #   host.enable = true;
     #   guest.enable = true;

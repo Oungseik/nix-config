@@ -74,6 +74,7 @@
     slurp
     jq
     lsof
+    noctalia-shell
     hyprlock
     hyprpaper
     hyprpolkitagent
@@ -82,6 +83,7 @@
     deja-dup
     evince
     tmux
+    dust
 
     firefox
     google-chrome

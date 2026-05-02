@@ -53,7 +53,7 @@
       alias v="nvim"
       alias note="cd $HOME/Notes && nvim"
 
-      export EDITOR=nvim
+      export EDITOR=neovide
       export PATH=~/.npm-global/bin:~/.local/bin:$PATH
       export PATH=$HOME/.cargo/bin:$PATH
       export NIXPKGS_ALLOW_UNFREE=1
