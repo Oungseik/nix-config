@@ -142,6 +142,7 @@
     gleam
     # ngrok
     google-cloud-sdk
+    cloudflared
 
     qemu
 
