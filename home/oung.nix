@@ -116,7 +116,7 @@
     nixfmt
     tombi
     markdown-oxide
-    (import ../pkgs/tree-sitter/default.nix { inherit pkgs; })
+    tree-sitter
     vale
     sqlite
     prettier
