@@ -60,9 +60,9 @@
     gammastep
     gnumake
     nix-prefetch-git
-    nix-inspect
     pavucontrol
     pcsx2
+    ppsspp
     playerctl
     ssh-to-age
     tun2socks
@@ -93,6 +93,7 @@
     # gitkraken
     unzip
     zip
+    p7zip
 
     vscode-fhs
     # code-cursor-fhs
@@ -143,6 +144,7 @@
     # ngrok
     google-cloud-sdk
     cloudflared
+    bubblewrap # sandbox for codex
 
     qemu
 
