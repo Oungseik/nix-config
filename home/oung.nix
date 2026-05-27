@@ -96,10 +96,12 @@
     p7zip
 
     vscode-fhs
+    windsurf
     # code-cursor-fhs
     slack
-    throne
+    # throne
     sshuttle
+    mullvad
 
     neovim
     neovide
@@ -114,6 +116,7 @@
     nodejs_24
     bun
     nil
+    nixd
     nixfmt
     tombi
     markdown-oxide

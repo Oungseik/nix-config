@@ -113,15 +113,15 @@
     upower.enable = true;
     # desktopManager.gnome.enable = true;
 
-    displayManager.gdm = {
-      enable = true;
-    };
-
-    # displayManager.sddm = {
+    # displayManager.gdm = {
     #   enable = true;
-    #   enableHidpi = true;
-    #   theme = "catppuccin-mocha-mauve"; # Theme name corresponds to the overridden package's theme name
     # };
+
+    displayManager.sddm = {
+      enable = true;
+      enableHidpi = true;
+      theme = "catppuccin-mocha-mauve"; # Theme name corresponds to the overridden package's theme name
+    };
 
     # Enable CUPS to print documents.
     # printing.enable = true;
@@ -172,12 +172,12 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    # (pkgs.catppuccin-sddm.override {
-    #   flavor = "mocha";
-    #   accent = "mauve";
-    # })
+    (pkgs.catppuccin-sddm.override {
+      flavor = "mocha";
+      accent = "mauve";
+    })
 
-    gdm
+    # gdm
     # openvpn
     curl
     clang
@@ -230,6 +230,11 @@
     ssh = {
       enableAskPassword = false;
       askPassword = "systemd-ask-password";
+    };
+
+    throne = {
+      enable = true;
+      tunMode.enable = true;
     };
 
     gamemode.enable = true;
