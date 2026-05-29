@@ -99,6 +99,7 @@
     windsurf
     # code-cursor-fhs
     slack
+    discord
     # throne
     sshuttle
     mullvad
@@ -174,6 +175,11 @@
         all.xdebug
       ]
     ))
+
+    (python314.withPackages (ps: [
+      ps.debugpy
+    ]))
+
   ];
 
   home.sessionVariables = {
