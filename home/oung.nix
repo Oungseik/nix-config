@@ -84,6 +84,7 @@
     evince
     tmux
     dust
+    poppler-utils
 
     firefox
     google-chrome
@@ -96,7 +97,6 @@
     p7zip
 
     vscode-fhs
-    windsurf
     # code-cursor-fhs
     slack
     discord
@@ -189,7 +189,7 @@
     LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
   };
 
-  home.stateVersion = "26.05";
+  home.stateVersion = "26.11";
 
   # Let home Manager install and manage itself.
   programs.home-manager.enable = true;

@@ -186,8 +186,8 @@
     git
     home-manager
     wget
-    libsForQt5.qt5.qtquickcontrols2
-    libsForQt5.qt5.qtgraphicaleffects
+    qt5.qtquickcontrols2
+    qt5.qtgraphicaleffects
 
     (
       let
@@ -237,6 +237,14 @@
       tunMode.enable = true;
     };
 
+    nix-ld = {
+      enable = true;
+      libraries = with pkgs; [
+        stdenv.cc.cc.lib # Provides libstdc++.so.6
+        zlib
+      ];
+    };
+
     gamemode.enable = true;
 
     hyprland.enable = true;
@@ -278,5 +286,5 @@
       "flakes"
     ];
   };
-  system.stateVersion = "26.05";
+  system.stateVersion = "26.11";
 }

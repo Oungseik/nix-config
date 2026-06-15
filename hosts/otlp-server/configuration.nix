@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
 
-  system.stateVersion = "26.05";
+  system.stateVersion = "26.11";
   services.openssh.enable = true;
 
   networking.firewall.allowedTCPPorts = [

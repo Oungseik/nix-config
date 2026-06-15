@@ -7,6 +7,8 @@
       "[normal] <C-->" = "zoom out";
     };
     options = import ./theme/catppuccin-frappe.nix;
-    extraConfig = '''';
+    extraConfig = ''
+      set selection-clipboard clipboard
+    '';
   };
 }

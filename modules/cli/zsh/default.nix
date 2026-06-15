@@ -56,6 +56,7 @@
       export EDITOR=nvim
       export PATH=~/.npm-global/bin:~/.local/bin:$PATH
       export PATH=$HOME/.cargo/bin:$PATH
+      export PATH="/home/oung/.bun/bin:$PATH"
       export NIXPKGS_ALLOW_UNFREE=1
       export AIRMUX_CONFIG=$HOME/.config/airmux
 
