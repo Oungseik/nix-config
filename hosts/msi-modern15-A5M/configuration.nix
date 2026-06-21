@@ -169,6 +169,8 @@
 
   # fonts.packages = with pkgs; [ (nerdfonts.override { fonts = [ "JetBrainsMono" ]; }) ];
 
+  security.polkit.enable = true;
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -186,6 +188,7 @@
     git
     home-manager
     wget
+    polkit_gnome
     qt5.qtquickcontrols2
     qt5.qtgraphicaleffects
 

@@ -1,9 +1,8 @@
 { ... }:
 {
   programs.kitty = {
-    # font.name = "ZedMono Nerd Font";
-    font.name = "JetBrainsMono NF";
-    font.size = 12;
+    font.name = "ZedMono Nerd Font";
+    font.size = 14;
 
     themeFile = "kanagawa";
 
@@ -21,8 +20,6 @@
 
       enable_audio_bell = false;
       background_opacity = "0.9";
-      "modify_font cell_height" = "110%";
-      "modify_font cell_width" = "94%";
 
       editor = "nvim";
 
@@ -32,7 +29,7 @@
       sync_to_monitor = "yes";
       allow_remote_control = "yes";
       listen_on = "unix:@mykitty";
-      disable_ligatures = "never";
+      disable_ligatures = "always";
     };
   };
 }
