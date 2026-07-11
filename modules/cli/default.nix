@@ -4,7 +4,7 @@
     ./atuin
     ./btop
     ./eza
-    ./fzf
+    # ./fzf
     ./git
     ./helix
     ./starship

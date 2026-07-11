@@ -110,8 +110,8 @@
     hurl
     lua-language-server
     stylua
-    typescript
-    typescript-language-server
+    # typescript
+    # typescript-language-server
     svelte-language-server
     vscode-langservers-extracted
     nodejs_24
