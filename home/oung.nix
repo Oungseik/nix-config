@@ -145,7 +145,7 @@
     delve
 
     gleam
-    # ngrok
+    ngrok
     google-cloud-sdk
     cloudflared
     bubblewrap # sandbox for codex
