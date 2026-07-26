@@ -99,7 +99,6 @@
     discord
     # throne
     sshuttle
-    mullvad
 
     neovim
     neovide
