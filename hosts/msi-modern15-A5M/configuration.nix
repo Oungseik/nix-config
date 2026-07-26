@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 {
   imports = [
     # Include the results of the hardware scan.
@@ -73,15 +73,7 @@
 
   services = {
     # Enable the X11 windowing system.
-    xserver = {
-      enable = true;
-      xkb = {
-        layout = "us";
-        variant = "";
-      };
-
-    };
-
+    xserver.enable = true;
     upower.enable = true;
     # desktopManager.gnome.enable = true;
 
@@ -226,12 +218,6 @@
     niri.enable = true;
     gdk-pixbuf.modulePackages = [ pkgs.librsvg ];
     zsh.enable = true;
-  };
-
-  xdg.portal = {
-    enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
-    configPackages = [ pkgs.xdg-desktop-portal-hyprland ];
   };
 
   # List services that you want to enable:
