@@ -6,8 +6,7 @@
 
     icons = "auto";
 
-    extraOptions =
-      [
-      ];
+    extraOptions = [
+    ];
   };
 }
