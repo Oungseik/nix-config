@@ -10,11 +10,8 @@
   };
 
   imports = [
-    inputs.nix-colors.homeManagerModules.default
-
     ../modules/cli
     ../modules/editors
-    ../modules/notification
     ../modules/terminals
     ../modules/themes
     ../modules/xresources
@@ -23,8 +20,6 @@
     ../modules/programs/zathura
     ../modules/window-managers/niri
   ];
-
-  colorScheme = inputs.nix-colors.colorSchemes.catppuccin-macchiato;
 
   programs = {
     fastfetch.enable = true;

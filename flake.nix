@@ -8,8 +8,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nix-colors.url = "github:misterio77/nix-colors";
-
     # nixvim.url = "github:Oungseik/nixvim-experimental";
     # helix.url = "github:helix-editor/helix/25.01.1";
   };
