@@ -1,9 +1,9 @@
-{ config, ... }:
+{ ... }:
 {
   programs.btop = {
 
     settings = {
-      color_theme = "/home/${config.home.username}/.config/btop/themes/catppuccin_macchiato.theme";
+      color_theme = "noctalia";
       vim_keys = true;
     };
   };
