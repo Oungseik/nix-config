@@ -4,7 +4,7 @@
   programs.zsh = {
     autocd = true;
     enableCompletion = true;
-    syntaxHighlighting.enable = false;
+    syntaxHighlighting.enable = true;
 
     shellAliases = {
       ls = "eza";
