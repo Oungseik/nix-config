@@ -27,7 +27,6 @@
     wofi.enable = true;
     zoxide.enable = true;
     zsh.enable = true;
-    television.enable = true;
   };
 
   home.packages = with pkgs; [
@@ -74,6 +73,7 @@
     hyprpaper
     hyprpolkitagent
     wl-clipboard
+    wl-clip-persist
     grim
     deja-dup
     evince
@@ -92,7 +92,9 @@
     p7zip
 
     vscode-fhs
-    # code-cursor-fhs
+    code-cursor-fhs
+    appimage-run
+
     slack
     discord
     # throne
@@ -120,6 +122,7 @@
     vale
     sqlite
     prettier
+    just
 
     postgresql
     sleek
